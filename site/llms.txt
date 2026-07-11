@@ -1,0 +1,60 @@
+# Vivoo
+
+> Vivoo est une plateforme d'activation marketing. Un CRM marketing, pas un CRM de gestion. Développée par Technologies Ilema Inc. (Québec, Canada). Vivoo réunit WhatsApp, Messenger, Instagram, SMS et courriel dans une seule plateforme pour capter, engager et fidéliser une clientèle. Marché ciblé : Canada/Québec.
+
+## Positionnement
+
+Un CRM de gestion structure des données (contacts, historique). Un CRM marketing les active : campagnes, scénarios d'engagement, programmes de fidélisation. Vivoo ne remplace pas les outils de gestion existants d'une entreprise (facturation, inventaire, ERP). Il s'y ajoute comme la couche qui active la relation avec la clientèle.
+
+## Canaux
+
+WhatsApp, Messenger, Instagram, SMS, courriel. Cinq canaux gérés depuis une seule plateforme, avec un profil client unifié peu importe le canal utilisé.
+
+## Parcours marketing en quatre temps
+
+1. **Acquisition**. Capture d'audience par code QR (boutique, facture, événement), sans application à installer.
+2. **Engagement**. Campagnes multicanal et scénarios d'automatisation (programmée, par mots-clés, séquences).
+3. **Fidélisation**. Points proportionnels aux achats, paliers de récompenses, relances automatiques après inactivité.
+4. **Mesure**. Intégration Meta Pixel : chaque action (capture, rendez-vous, achat) est renvoyée à Meta pour optimiser le ciblage publicitaire.
+
+## Modules
+
+- Capture d'audience. /produit/capture/
+- Audience unifiée. /produit/audience-unifiee/
+- Campagnes multicanal. /produit/campagnes/
+- Automatisation (programmée, mots-clés, séquences). /produit/automatisation/
+- Rendez-vous. /produit/rendez-vous/
+- Gestion d'événements. /produit/evenements/
+- Programme de fidélisation. /produit/fidelisation/
+- Scénarios (parcours combinés). /produit/scenarios/
+
+## Modèle de partenariat (B2B2B)
+
+Trois niveaux : Vivoo opère la plateforme ; un réseau de partenaires déploie Vivoo auprès de son portefeuille de marchands avec autonomie commerciale complète ; chaque marchand utilise Vivoo pour engager sa propre clientèle. Détails : /partenaires/
+
+## Tarification
+
+Abonnement aux modules et consommation de crédits de communication selon le volume de messages envoyés. Le tarif exact dépend du secteur et du volume. Détails : /faq/
+
+## Cas clients
+
+- MakoFoods (restaurant et épicerie, Longueuil). Page de capture, fidélisation, campagnes.
+- Kinaya Massothérapeute (Gatineau). Calendrier, page de capture.
+- Twish Cart (épicerie en gros, Ottawa). Campagnes, page de capture, rendez-vous, fidélisation.
+
+Détails : /cas-clients/
+
+## Pages du site
+
+- Accueil : /
+- Produit (vue d'ensemble) : /produit/
+- Partenaires : /partenaires/
+- Cas clients : /cas-clients/
+- FAQ (incluant les tarifs) : /faq/
+- Contact : /contact/
+- Mentions légales : /mentions-legales/
+- Blog : /blog/
+
+## Éditeur
+
+Technologies Ilema Inc., Québec, Canada. Site web : https://vivoo.pro

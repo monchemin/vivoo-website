@@ -1,0 +1,742 @@
+/* Vivoo. Feuille de style partagée
+   Charte : navy #0B3B61, bleu #3B78A1, fond blanc, accent clair #EEF4F9
+   Typographie : Montserrat (400 texte courant, 600 titres) */
+
+:root {
+  --navy: #0B3B61;
+  --blue: #3B78A1;
+  --white: #FFFFFF;
+  --accent-light: #EEF4F9;
+  --text: #1C2B36;
+  --text-muted: #4C5C68;
+  --border: #DCE6ED;
+  --radius: 10px;
+  --max-content: 720px;
+  --max-wide: 1120px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  font-weight: 400;
+  color: var(--text);
+  background: var(--white);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: var(--blue);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1, h2, h3 {
+  font-weight: 600;
+  color: var(--navy);
+  line-height: 1.25;
+  margin: 0 0 0.6em;
+}
+
+h1 {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+}
+
+h2 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+p {
+  margin: 0 0 1.2em;
+}
+
+ul {
+  margin: 0 0 1.2em;
+  padding-left: 1.3em;
+}
+
+blockquote {
+  margin: 0 0 1.2em;
+  padding: 1em 1.4em;
+  background: var(--accent-light);
+  border-radius: var(--radius);
+  font-style: italic;
+  color: var(--text-muted);
+}
+
+.container {
+  max-width: var(--max-wide);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.prose {
+  max-width: var(--max-content);
+  margin: 0 auto;
+}
+
+/* ---------- Header ---------- */
+
+.site-header {
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  background: var(--white);
+  z-index: 50;
+}
+
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 28px;
+  width: auto;
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 0.5em 0.75em;
+  font-size: 1rem;
+  color: var(--navy);
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+  flex-wrap: wrap;
+}
+
+.main-nav a {
+  color: var(--text);
+  font-size: 0.95rem;
+  font-weight: 400;
+}
+
+.main-nav a:hover,
+.main-nav a[aria-current="page"] {
+  color: var(--navy);
+  text-decoration: underline;
+}
+
+.has-submenu {
+  position: relative;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 0.5rem 0;
+  min-width: 240px;
+  box-shadow: none;
+}
+
+.has-submenu:hover .submenu,
+.has-submenu:focus-within .submenu {
+  display: block;
+}
+
+.submenu a {
+  display: block;
+  padding: 0.5em 1em;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.submenu a:hover {
+  background: var(--accent-light);
+  text-decoration: none;
+}
+
+.nav-login {
+  color: var(--navy) !important;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.nav-cta {
+  padding: 0.55em 1.2em;
+  background: var(--navy);
+  color: var(--white) !important;
+  border-radius: var(--radius);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.nav-cta:hover {
+  background: var(--blue);
+  text-decoration: none;
+}
+
+/* ---------- Buttons ---------- */
+
+.btn {
+  display: inline-block;
+  padding: 0.8em 1.6em;
+  border-radius: var(--radius);
+  font-weight: 600;
+  font-size: 1rem;
+  border: 2px solid transparent;
+}
+
+.btn-primary {
+  background: var(--navy);
+  color: var(--white);
+}
+
+.btn-primary:hover {
+  background: var(--blue);
+  text-decoration: none;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--navy);
+  border-color: var(--navy);
+}
+
+.btn-secondary:hover {
+  background: var(--accent-light);
+  text-decoration: none;
+}
+
+/* ---------- Layout sections ---------- */
+
+.section {
+  padding: 4.5rem 0;
+}
+
+.section-alt {
+  background: var(--accent-light);
+}
+
+.section-navy {
+  background: var(--navy);
+  color: var(--white);
+}
+
+.section-navy h1,
+.section-navy h2,
+.section-navy h3 {
+  color: var(--white);
+}
+
+.section-navy .text-muted {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--blue);
+  margin: 0 0 0.75em;
+}
+
+.section-navy .eyebrow {
+  color: #9FC3DC;
+}
+
+.text-muted {
+  color: var(--text-muted);
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* ---------- Hero ---------- */
+
+.hero {
+  padding: 5rem 0 4rem;
+}
+
+.hero .prose {
+  text-align: center;
+}
+
+.hero-actions {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.hero-illustration {
+  display: block;
+  max-width: 460px;
+  width: 100%;
+  height: auto;
+  margin: 3.5rem auto 0;
+}
+
+/* ---------- Cards / grids ---------- */
+
+.grid {
+  display: grid;
+  gap: 2rem;
+}
+
+.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@media (max-width: 900px) {
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.75rem;
+}
+
+.card h3 {
+  margin-bottom: 0.5em;
+}
+
+.icon-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--accent-light);
+  color: var(--navy);
+  margin-bottom: 1rem;
+  flex-shrink: 0;
+}
+
+.section-alt .icon-badge,
+.card .icon-badge {
+  background: var(--white);
+  border: 1px solid var(--border);
+}
+
+.channel-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2.25rem;
+  margin: 2.5rem 0;
+}
+
+.channel-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.channel-item .icon-badge {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 0;
+  background: var(--white);
+  border: 1px solid var(--border);
+}
+
+.channel-item span {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--navy);
+}
+
+.card a.card-link {
+  display: inline-block;
+  margin-top: 0.75em;
+  font-weight: 600;
+}
+
+.section-alt .card {
+  background: var(--white);
+}
+
+/* ---------- Module list (product overview) ---------- */
+
+.module-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+/* ---------- Steps ---------- */
+
+.steps {
+  counter-reset: step;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 900px) {
+  .steps {
+    grid-template-columns: 1fr;
+  }
+}
+
+.step {
+  position: relative;
+  padding-left: 3rem;
+}
+
+.step::before {
+  counter-increment: step;
+  content: counter(step);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 50%;
+  background: var(--navy);
+  color: var(--white);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ---------- FAQ ---------- */
+
+.faq-item {
+  border-bottom: 1px solid var(--border);
+  padding: 1.5rem 0;
+}
+
+.faq-item:first-child {
+  padding-top: 0;
+}
+
+.faq-item h3 {
+  margin-bottom: 0.5em;
+}
+
+.faq-category {
+  margin-bottom: 0.5rem;
+}
+
+/* ---------- Breadcrumb ---------- */
+
+.breadcrumb {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  padding: 1rem 0 0;
+}
+
+.breadcrumb a {
+  color: var(--text-muted);
+}
+
+.breadcrumb .sep {
+  margin: 0 0.4em;
+}
+
+/* ---------- Module page header ---------- */
+
+.module-hero {
+  padding: 3.5rem 0 3rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.module-nav-back {
+  display: inline-block;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.tag {
+  background: var(--accent-light);
+  color: var(--navy);
+  border-radius: 999px;
+  padding: 0.35em 0.9em;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* ---------- CTA band ---------- */
+
+.cta-band {
+  background: var(--navy);
+  color: var(--white);
+  padding: 3.5rem 0;
+  text-align: center;
+}
+
+.cta-band h2 {
+  color: var(--white);
+}
+
+.cta-band .btn-primary {
+  background: var(--white);
+  color: var(--navy);
+}
+
+.cta-band .btn-primary:hover {
+  background: var(--accent-light);
+}
+
+/* ---------- Footer ---------- */
+
+.site-footer {
+  background: var(--navy);
+  color: rgba(255, 255, 255, 0.85);
+  padding: 3.5rem 0 2rem;
+  font-size: 0.9rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+@media (max-width: 900px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.site-footer h3 {
+  color: var(--white);
+  font-size: 0.95rem;
+  margin-bottom: 0.9em;
+}
+
+.site-footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.site-footer li {
+  margin-bottom: 0.6em;
+}
+
+.site-footer a {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.site-footer a:hover {
+  color: var(--white);
+}
+
+.footer-logo img {
+  height: 24px;
+  margin-bottom: 1rem;
+  filter: brightness(0) invert(1);
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  padding-top: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+/* ---------- Form ---------- */
+
+form.contact-form {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.contact-form label {
+  display: block;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 0.4em;
+  font-size: 0.9rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.75em 0.9em;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-family: inherit;
+  font-size: 1rem;
+  color: var(--text);
+  background: var(--white);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: 2px solid var(--blue);
+  outline-offset: 1px;
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+.contact-form .form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+@media (max-width: 560px) {
+  .contact-form .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.contact-form .form-checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6em;
+}
+
+.contact-form .form-checkbox input[type="checkbox"] {
+  appearance: auto;
+  width: 17px;
+  height: 17px;
+  margin: 0;
+  margin-top: 0.15em;
+  flex: 0 0 17px;
+  accent-color: var(--navy);
+}
+
+.contact-form .form-checkbox label {
+  margin-bottom: 0;
+  font-weight: 400;
+  color: var(--text);
+  font-size: 0.8rem;
+  line-height: 1.3;
+}
+
+.contact-form .optional {
+  font-weight: 400;
+  color: var(--text-muted);
+}
+
+/* ---------- Social icons ---------- */
+
+.social-icons {
+  display: flex;
+  gap: 0.75rem;
+  margin: 1rem 0 1.5rem;
+}
+
+.social-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  color: var(--navy);
+}
+
+.social-icons a:hover {
+  background: var(--accent-light);
+}
+
+/* ---------- Utility ---------- */
+
+.mt-0 { margin-top: 0; }
+.mb-0 { margin-bottom: 0; }
+
+@media (max-width: 800px) {
+  .main-nav {
+    display: none;
+  }
+  .nav-toggle {
+    display: inline-block;
+  }
+  body.nav-open .main-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    padding: 1.5rem;
+  }
+  body.nav-open .has-submenu .submenu {
+    display: block;
+    position: static;
+    border: none;
+    padding: 0.5rem 0 0 1rem;
+  }
+}

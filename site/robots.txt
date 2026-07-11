@@ -1,0 +1,18 @@
+User-agent: *
+Allow: /
+
+# Crawlers IA. Autorisés pour la citation dans les réponses des assistants
+# (à revoir si Vivoo souhaite bloquer l'indexation par ces moteurs)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://vivoo.pro/sitemap.xml
