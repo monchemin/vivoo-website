@@ -1,40 +1,56 @@
 # Vivoo
 
-> Vivoo est une plateforme d'activation marketing. Un CRM marketing, pas un CRM de gestion. Développée par Technologies Ilema Inc. (Québec, Canada). Vivoo réunit WhatsApp, Messenger, Instagram, SMS et courriel dans une seule plateforme pour capter, engager et fidéliser une clientèle. Marché ciblé : Canada/Québec.
+> Vivoo est un système commercial qui relie l'acquisition, la conversation, la conversion, la vente et la fidélisation. Signature : « Attirez. Convertissez. Faites revenir. » Vivoo transforme les prospects, les conversations et les clients d'une entreprise en un système commercial qui travaille pour elle, sur WhatsApp, Instagram, Messenger, courriel et SMS. Développé par Technologies Ilema Inc. (Québec, Canada).
 
-## Positionnement
+## Idée centrale
 
-Un CRM de gestion structure des données (contacts, historique). Un CRM marketing les active : campagnes, scénarios d'engagement, programmes de fidélisation. Vivoo ne remplace pas les outils de gestion existants d'une entreprise (facturation, inventaire, ERP). Il s'y ajoute comme la couche qui active la relation avec la clientèle.
+Une entreprise ne manque pas d'outils, elle manque d'un système. Vivoo connecte dans un même parcours ce qui est habituellement éparpillé : les messages sur un canal, les rendez-vous sur un autre, les ventes ailleurs, les relances de mémoire. Chaque interaction nourrit la suivante.
 
-## Canaux
+## Le parcours
 
-WhatsApp, Messenger, Instagram, SMS, courriel. Cinq canaux gérés depuis une seule plateforme, avec un profil client unifié peu importe le canal utilisé.
+Attirer → Capter → Converser → Convertir → Vendre → Fidéliser → Mesurer, puis retour à Attirer.
 
-## Parcours marketing en quatre temps
+## Les six pôles
 
-1. **Acquisition**. Capture d'audience par code QR (boutique, facture, événement), sans application à installer.
-2. **Engagement**. Campagnes multicanal et scénarios d'automatisation (programmée, par mots-clés, séquences).
-3. **Fidélisation**. Points proportionnels aux achats, paliers de récompenses, relances automatiques après inactivité.
-4. **Mesure**. Intégration Meta Pixel : chaque action (capture, rendez-vous, achat) est renvoyée à Meta pour optimiser le ciblage publicitaire.
+1. **Acquisition** (attirer). Prospection sur Google Maps, pages de capture, codes QR, campagnes, mesure Meta (Pixel et API de conversions). /solution/acquisition/
+2. **Conversation** (converser). WhatsApp, Instagram, Messenger, courriel, SMS, CRM avec profil client unifié. /solution/conversation/
+3. **Conversion** (convertir). Rendez-vous synchronisés avec Google Agenda, pages de conversion, pages de vente, paiement. /solution/conversion/
+4. **Vente** (vendre). Produits, services, commandes, événements, synchronisation Shopify, Square, Clover et WooCommerce. /solution/vente/
+5. **Fidélisation** (fidéliser). Campagnes, promotions, codes promo, programme de fidélité, avis, segmentation RFM. /solution/fidelisation/
+6. **Automatisation** (automatiser). Déclencheurs, automatisations, séquences, notifications. /solution/automatisation/
 
-## Modules
+Le CRM, l'automatisation et la mesure (CAPI) sont les couches qui font fonctionner l'ensemble.
 
-- Capture d'audience. /produit/capture/
-- Audience unifiée. /produit/audience-unifiee/
-- Campagnes multicanal. /produit/campagnes/
-- Automatisation (programmée, mots-clés, séquences). /produit/automatisation/
-- Rendez-vous. /produit/rendez-vous/
-- Gestion d'événements. /produit/evenements/
-- Programme de fidélisation. /produit/fidelisation/
-- Scénarios (parcours combinés). /produit/scenarios/
+## Automatisation, séquence, scénario
+
+- Automatisation : une action se déclenche automatiquement (ex. 30 jours sans achat → relance).
+- Séquence : plusieurs actions s'enchaînent dans le temps (jour 0 message, jour 3 relance, jour 7 offre).
+- Scénario : un parcours commercial complet (publicité → capture → conversation → rendez-vous → vente → fidélisation).
+
+## Solutions par activité
+
+- Thérapeutes, offre préconfigurée Alma. /solutions/therapeutes/
+- Restaurants et commerces alimentaires, offre préconfigurée Zagor. /solutions/restaurants/
+- Commerce. /solutions/commerce/
+- Services. /solutions/services/
+- Événements. /solutions/evenements/
+
+## Scénarios
+
+Transformer une publicité en client, convertir une conversation, remplir son agenda, transformer une vente en relation durable, faire revenir un client inactif, transformer un code QR en client fidèle. /scenarios/
+
+## Tarification
+
+Deux choix : une offre de modules et des crédits d'utilisation des canaux.
+
+- Offres de modules : Alma (thérapeutes, préconfigurée), Zagor (restaurants et commerces alimentaires, préconfigurée), Libre (l'entreprise compose ses modules elle-même).
+- Crédits d'utilisation des canaux (WhatsApp, SMS, courriel, Instagram, Messenger, prospection) : crédits achetés au besoin, plan de crédits, ou abonnement.
+
+Aucun prix n'est publié : le tarif dépend de l'offre et du volume d'envois. Détails : /tarifs/
 
 ## Modèle de partenariat (B2B2B)
 
 Trois niveaux : Vivoo opère la plateforme ; un réseau de partenaires déploie Vivoo auprès de son portefeuille de marchands avec autonomie commerciale complète ; chaque marchand utilise Vivoo pour engager sa propre clientèle. Détails : /partenaires/
-
-## Tarification
-
-Abonnement aux modules et consommation de crédits de communication selon le volume de messages envoyés. Le tarif exact dépend du secteur et du volume. Détails : /faq/
 
 ## Cas clients
 
@@ -47,13 +63,18 @@ Détails : /cas-clients/
 ## Pages du site
 
 - Accueil : /
-- Produit (vue d'ensemble) : /produit/
-- Partenaires : /partenaires/
+- Solution (le système) : /solution/
+- Solutions par activité : /solutions/
+- Scénarios : /scenarios/
+- Comment ça marche : /comment-ca-marche/
+- Tarifs : /tarifs/
+- À propos : /a-propos/
+- Comment nous pensons : /vision/
+- Modules en détail : /produit/capture/, /produit/prospection/, /produit/audience-unifiee/, /produit/campagnes/, /produit/automatisation/, /produit/rendez-vous/, /produit/commerce/, /produit/evenements/, /produit/fidelisation/, /produit/reputation/
 - Cas clients : /cas-clients/
-- FAQ (incluant les tarifs) : /faq/
+- Partenaires : /partenaires/
+- FAQ : /faq/
 - Contact : /contact/
-- Mentions légales : /mentions-legales/
-- Blog : /blog/
 
 ## Éditeur
 

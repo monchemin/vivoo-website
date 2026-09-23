@@ -1,6 +1,11 @@
 <!doctype html>
 <html lang="fr-CA">
 <head>
+<script>
+if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  document.documentElement.classList.add('vv-js');
+}
+</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Audience unifiée multicanal. Vivoo</title>
@@ -30,97 +35,104 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://vivoo.pro/"},{"@type":"ListItem","position":2,"name":"Produit","item":"https://vivoo.pro/produit/"},{"@type":"ListItem","position":3,"name":"Audience unifiée"}]}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Si un client m'écrit sur deux canaux différents, est-ce deux profils ou un seul ?","acceptedAnswer":{"@type":"Answer","text":"Un seul. Vivoo associe les interactions au même profil dès qu'il reconnaît qu'il s'agit du même client, peu importe le canal utilisé."}},{"@type":"Question","name":"Puis-je segmenter mon audience pour des campagnes ciblées ?","acceptedAnswer":{"@type":"Answer","text":"Oui. L'audience unifiée sert de base pour créer des segments. Par comportement, par historique d'achat ou par tout autre critère pertinent pour votre commerce."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://vivoo.pro/"}, {"@type": "ListItem", "position": 2, "name": "Solution", "item": "https://vivoo.pro/solution/"}, {"@type": "ListItem", "position": 3, "name": "Conversation", "item": "https://vivoo.pro/solution/conversation/"}, {"@type": "ListItem", "position": 4, "name": "Audience unifiée"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Si un client m'écrit sur deux canaux différents, est-ce deux profils ou un seul ?", "acceptedAnswer": {"@type": "Answer", "text": "Un seul. Vivoo associe les interactions au même profil dès qu'il reconnaît qu'il s'agit du même client, peu importe le canal utilisé."}}, {"@type": "Question", "name": "Puis-je segmenter mon audience pour des campagnes ciblées ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui. L'audience unifiée sert de base pour créer des segments. Par comportement, par historique d'achat ou par tout autre critère pertinent pour votre commerce."}}]}</script>
 </head>
 <body>
-<header class="site-header">
+<header class="site-header sy-header">
   <div class="container">
     <a class="logo" href="/" aria-label="Vivoo. Accueil">
       <img src="/assets/img/logo-vivoo.png" alt="Vivoo" width="120" height="32">
     </a>
     <button class="nav-toggle" type="button" aria-label="Ouvrir le menu" onclick="document.body.classList.toggle('nav-open')">☰</button>
     <nav class="main-nav" aria-label="Navigation principale">
-      <a href="/">Accueil</a>
       <div class="has-submenu">
-        <a href="/produit/">Produit</a>
-        <ul class="submenu">
-          <li><a href="/produit/">Vue d'ensemble</a></li>
-          <li><a href="/produit/capture/">Capture d'audience</a></li>
-          <li><a href="/produit/audience-unifiee/" aria-current="page">Audience unifiée</a></li>
-          <li><a href="/produit/campagnes/">Campagnes multicanal</a></li>
-          <li><a href="/produit/automatisation/">Automatisation</a></li>
-          <li><a href="/produit/rendez-vous/">Rendez-vous</a></li>
-          <li><a href="/produit/evenements/">Gestion d'événements</a></li>
-          <li><a href="/produit/fidelisation/">Fidélisation</a></li>
-          <li><a href="/produit/reputation/">Réputation</a></li>
-          <li><a href="/produit/scenarios/">Scénarios</a></li>
+        <a href="/solution/">Solution</a>
+        <ul class="submenu sy-mega">
+          <li><a href="/solution/"><span class="sy-mega-k">Le système</span><span>Vue d'ensemble</span></a></li>
+          <li><a href="/solution/acquisition/"><span class="sy-mega-k">Acquérir</span><span>Acquisition</span></a></li>
+          <li><a href="/solution/conversation/" aria-current="page"><span class="sy-mega-k">Converser</span><span>Conversation</span></a></li>
+          <li><a href="/solution/conversion/"><span class="sy-mega-k">Convertir</span><span>Conversion</span></a></li>
+          <li><a href="/solution/vente/"><span class="sy-mega-k">Vendre</span><span>Vente</span></a></li>
+          <li><a href="/solution/fidelisation/"><span class="sy-mega-k">Fidéliser</span><span>Fidélisation</span></a></li>
+          <li><a href="/solution/automatisation/"><span class="sy-mega-k">Automatiser</span><span>Automatisation</span></a></li>
+          <li class="sy-mega-sep" role="presentation"></li>
+          <li><a href="/comment-ca-marche/"><span class="sy-mega-k">Démarrer</span><span>Comment ça marche</span></a></li>
         </ul>
       </div>
-      <a href="/partenaires/">Partenaires</a>
-      <a href="/cas-clients/">Cas clients</a>
-      <a href="/faq/">FAQ</a>
-      <a href="/contact/">Contact</a>
+      <div class="has-submenu">
+        <a href="/solutions/">Solutions</a>
+        <ul class="submenu sy-mega">
+          <li><a href="/solutions/"><span class="sy-mega-k">Par activité</span><span>Vue d'ensemble</span></a></li>
+          <li><a href="/solutions/therapeutes/"><span class="sy-mega-k">Alma</span><span>Thérapeutes</span></a></li>
+          <li><a href="/solutions/restaurants/"><span class="sy-mega-k">Zagor</span><span>Restaurants</span></a></li>
+          <li><a href="/solutions/commerce/"><span class="sy-mega-k">&nbsp;</span><span>Commerce</span></a></li>
+          <li><a href="/solutions/services/"><span class="sy-mega-k">&nbsp;</span><span>Services</span></a></li>
+          <li><a href="/solutions/evenements/"><span class="sy-mega-k">&nbsp;</span><span>Événements</span></a></li>
+        </ul>
+      </div>
+      <a href="/scenarios/">Scénarios</a>
+      <a href="/tarifs/">Tarifs</a>
+      <a href="/a-propos/">À propos</a>
+      <span class="nav-spacer" aria-hidden="true"></span>
       <a class="nav-login" href="https://app.vivoo.pro" target="_blank" rel="noopener">Connexion</a>
-      <a class="nav-cta" href="https://app.vivoo.pro/book/zrNLzn" target="_blank" rel="noopener">Demander une démo</a>
+      <a class="nav-cta" href="https://app.vivoo.pro/signup/initiate" target="_blank" rel="noopener">Créer mon compte</a>
     </nav>
   </div>
 </header>
-<nav class="breadcrumb container" aria-label="Fil d'Ariane"><a href="/">Accueil</a><span class="sep"> › </span><a href="/produit/">Produit</a><span class="sep"> › </span><span aria-current="page">Audience unifiée</span></nav><main>
+<nav class="breadcrumb container sy-crumb" aria-label="Fil d'Ariane"><a href="/">Accueil</a><span class="sep"> › </span><a href="/solution/">Solution</a><span class="sep"> › </span><a href="/solution/conversation/">Conversation</a><span class="sep"> › </span><span aria-current="page">Audience unifiée</span></nav>
+<main>
 
-<section class="module-hero">
-  <div class="container prose">
-    <a class="module-nav-back" href="/produit/">← Retour au produit</a>
-    <span class="icon-badge"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 7a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" />
+<section class="sy-page-hero">
+  <div class="sy-wrap">
+    <a class="sy-back" href="/solution/conversation/">← Pôle Conversation</a>
+    <p class="sy-index"><span class="sy-mod-icon" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 7a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" />
 <path d="M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
 <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-<path d="M21 21v-2a4 4 0 0 0 -3 -3.85" /></svg></span>
-    <h1>Chaque client, un seul profil. Peu importe le canal</h1>
-    <p>Un client qui vous écrit sur WhatsApp aujourd'hui et sur Messenger la semaine prochaine reste le même profil dans Vivoo. L'audience unifiée élimine les doublons et les silos qui s'accumulent normalement entre canaux.</p>
+<path d="M21 21v-2a4 4 0 0 0 -3 -3.85" /></svg></span><b>02</b> — Module · Audience unifiée</p>
+    <h1 class="sy-display">Chaque client, un seul profil. Peu importe le canal</h1>
+    <p class="sy-lead">Un client qui vous écrit sur WhatsApp aujourd'hui et sur Messenger la semaine prochaine reste le même profil dans Vivoo. L'audience unifiée élimine les doublons et les silos qui s'accumulent normalement entre canaux.</p>
   </div>
+  <span class="sy-ghost-num" aria-hidden="true">02</span>
 </section>
 
-<section class="section">
-  <div class="container">
-    <h2 class="text-center">Ce que le module permet</h2>
-    <div class="grid grid-3" style="margin-top:2.5rem;">
-      <div class="card">
-        <h3>Un profil, tous les canaux</h3>
-        <p>Peu importe où un client vous contacte. WhatsApp, Messenger, Instagram, SMS ou courriel. Son historique se retrouve au même endroit, jamais éclaté entre plusieurs fiches.</p>
-      </div>
-      <div class="card">
-        <h3>Un historique d'engagement consolidé</h3>
-        <p>Chaque interaction, chaque achat, chaque rendez-vous pris s'ajoute au même profil. Une vue d'ensemble plutôt que des fragments dispersés.</p>
-      </div>
-      <div class="card">
-        <h3>Une base pour cibler, pas seulement archiver</h3>
-        <p>Cette audience unifiée sert directement de base à vos campagnes et à vos scénarios d'automatisation : vous ciblez des segments réels, pas des listes déconnectées les unes des autres.</p>
-      </div>
+<section class="sy-section sy-reveal">
+  <div class="sy-wrap">
+    <div class="sy-head sy-head--split">
+      <div><p class="sy-index"><b>01</b> — Ce que le module permet</p><h2 class="sy-h2">Audience unifiée, concrètement.</h2></div>
+      <p class="sy-lead">Un module du pôle conversation : transformez chaque échange en opportunité.</p>
     </div>
+    <ol class="sy-steps sy-steps--3"><li><span class="sy-step-num">01</span><h3>Un profil, tous les canaux</h3><p>Peu importe où un client vous contacte. WhatsApp, Messenger, Instagram, SMS ou courriel. Son historique se retrouve au même endroit, jamais éclaté entre plusieurs fiches.</p></li><li><span class="sy-step-num">02</span><h3>Un historique d'engagement consolidé</h3><p>Chaque interaction, chaque achat, chaque rendez-vous pris s'ajoute au même profil. Une vue d'ensemble plutôt que des fragments dispersés.</p></li><li><span class="sy-step-num">03</span><h3>Une base pour cibler, pas seulement archiver</h3><p>Cette audience unifiée sert directement de base à vos campagnes et à vos scénarios d'automatisation : vous ciblez des segments réels, pas des listes déconnectées les unes des autres.</p></li></ol>
   </div>
 </section>
 
-<section class="section section-alt">
-  <div class="container prose">
-    <h2>Questions fréquentes</h2>
-      <div class="faq-item">
-        <h3>Si un client m'écrit sur deux canaux différents, est-ce deux profils ou un seul ?</h3>
-        <p>Un seul. Vivoo associe les interactions au même profil dès qu'il reconnaît qu'il s'agit du même client, peu importe le canal utilisé.</p>
-      </div>
-      <div class="faq-item">
-        <h3>Puis-je segmenter mon audience pour des campagnes ciblées ?</h3>
-        <p>Oui. L'audience unifiée sert de base pour créer des segments. Par comportement, par historique d'achat ou par tout autre critère pertinent pour votre commerce.</p>
-      </div>
+<section class="sy-section sy-alt sy-reveal">
+  <div class="sy-wrap sy-narrow">
+    <p class="sy-index"><b>02</b> — Questions fréquentes</p>
+    <div class="faq-item"><h3>Si un client m'écrit sur deux canaux différents, est-ce deux profils ou un seul ?</h3><p>Un seul. Vivoo associe les interactions au même profil dès qu'il reconnaît qu'il s'agit du même client, peu importe le canal utilisé.</p></div><div class="faq-item"><h3>Puis-je segmenter mon audience pour des campagnes ciblées ?</h3><p>Oui. L'audience unifiée sert de base pour créer des segments. Par comportement, par historique d'achat ou par tout autre critère pertinent pour votre commerce.</p></div>
   </div>
 </section>
 
-<section class="cta-band">
-  <div class="container prose">
+<section class="sy-section sy-reveal">
+  <div class="sy-wrap">
+    <div class="sy-head sy-head--split">
+      <div><p class="sy-index"><b>03</b> — Dans le système</p><h2 class="sy-h2">Ce module ne travaille jamais seul.</h2></div>
+      <p class="sy-lead">Chaque module s'inscrit dans un pôle, et chaque pôle nourrit le suivant.</p>
+    </div>
+    <div class="sy-cards"><a class="sy-card" href="/solution/conversation/"><span class="sy-card-num">Pôle 02 · Converser</span><h3>Conversation</h3><p>Transformez chaque échange en opportunité.</p><span class="sy-card-more">Voir le pôle →</span></a><a class="sy-card" href="/scenarios/#conversation"><span class="sy-card-num">Scénario</span><h3>Convertir une conversation</h3><p>Voyez ce module s'enchaîner avec les autres dans un parcours complet.</p><span class="sy-card-more">Voir le scénario →</span></a></div>
+  </div>
+</section>
+<section class="sy-cta">
+  <div class="sy-wrap">
     <h2>Prêt à voir votre clientèle comme un tout, pas comme des fragments ?</h2>
-    <a class="btn btn-primary" href="https://app.vivoo.pro/book/zrNLzn" target="_blank" rel="noopener">Demander une démo</a>
+    <p>Créez votre compte et activez ce module, ou parlez à un spécialiste pour l'intégrer à votre parcours.</p>
+    <div class="sy-actions">
+      <a class="btn sy-btn-light" href="https://app.vivoo.pro/signup/initiate" target="_blank" rel="noopener">Créer mon compte</a>
+      <a class="btn sy-btn-ghost" href="https://app.vivoo.pro/book/zrNLzn" target="_blank" rel="noopener">Parler à un spécialiste</a>
+    </div>
+    <div class="sy-cta-sign">Attirez. Convertissez. Faites revenir.</div>
   </div>
 </section>
-
 </main>
 <footer class="site-footer">
   <div class="container">
@@ -129,62 +141,69 @@
         <div class="footer-logo">
           <img src="/assets/img/logo-vivoo.png" alt="Vivoo" width="90" height="24">
         </div>
-        <p>Vivoo est la plateforme d'activation marketing qui réunit WhatsApp, Messenger, Instagram, SMS et courriel pour capter, engager et fidéliser votre clientèle.</p>
-        <p>Une plateforme de <a href="https://ilematec.com" target="_blank" rel="noopener">Technologies Ilema Inc.</a></p>
+        <p><strong>Attirez. Convertissez. Faites revenir.</strong></p>
+        <p>Vivoo relie vos prospects, vos conversations, vos rendez-vous, vos ventes et vos clients dans un seul système commercial, sur WhatsApp, Instagram, Messenger, courriel et SMS.</p>
       </div>
       <div>
-        <h3>Produit</h3>
+        <h3>Solution</h3>
         <ul>
-          <li><a href="/produit/">Vue d'ensemble</a></li>
-          <li><a href="/produit/capture/">Capture d'audience</a></li>
-          <li><a href="/produit/audience-unifiee/">Audience unifiée</a></li>
-          <li><a href="/produit/campagnes/">Campagnes multicanal</a></li>
-          <li><a href="/produit/automatisation/">Automatisation</a></li>
-          <li><a href="/produit/rendez-vous/">Rendez-vous</a></li>
-          <li><a href="/produit/evenements/">Événements</a></li>
-          <li><a href="/produit/fidelisation/">Fidélisation</a></li>
-          <li><a href="/produit/reputation/">Réputation</a></li>
-          <li><a href="/produit/scenarios/">Scénarios</a></li>
+          <li><a href="/solution/">Le système Vivoo</a></li>
+          <li><a href="/solution/acquisition/">Acquisition</a></li>
+          <li><a href="/solution/conversation/">Conversation</a></li>
+          <li><a href="/solution/conversion/">Conversion</a></li>
+          <li><a href="/solution/vente/">Vente</a></li>
+          <li><a href="/solution/fidelisation/">Fidélisation</a></li>
+          <li><a href="/solution/automatisation/">Automatisation</a></li>
+          <li><a href="/comment-ca-marche/">Comment ça marche</a></li>
         </ul>
       </div>
       <div>
-        <h3>Entreprise</h3>
+        <h3>Solutions</h3>
         <ul>
-          <li><a href="/partenaires/">Partenaires</a></li>
+          <li><a href="/solutions/therapeutes/">Thérapeutes · Alma</a></li>
+          <li><a href="/solutions/restaurants/">Restaurants · Zagor</a></li>
+          <li><a href="/solutions/commerce/">Commerce</a></li>
+          <li><a href="/solutions/services/">Services</a></li>
+          <li><a href="/solutions/evenements/">Événements</a></li>
+          <li><a href="/scenarios/">Scénarios</a></li>
+          <li><a href="/tarifs/">Tarifs</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Vivoo</h3>
+        <ul>
+          <li><a href="/a-propos/">À propos</a></li>
+          <li><a href="/vision/">Comment nous pensons</a></li>
           <li><a href="/cas-clients/">Cas clients</a></li>
+          <li><a href="/partenaires/">Partenaires</a></li>
           <li><a href="/blog/">Blog</a></li>
+          <li><a href="/faq/">FAQ</a></li>
           <li><a href="/contact/">Contact</a></li>
         </ul>
       </div>
       <div>
-        <h3>Légal</h3>
-        <ul>
-          <li><a href="/faq/">FAQ</a></li>
-          <li><a href="/mentions-legales/">Mentions légales</a></li>
-          <li><a href="/conditions/">Conditions d'utilisation</a></li>
-          <li><a href="/privacy/">Politique de confidentialité</a></li>
-        </ul>
-      </div>
-      <div>
-        <h3>Réseaux</h3>
+        <h3>Réseaux &amp; légal</h3>
         <ul>
           <li><a href="https://www.facebook.com/CRM.ViVoo/" target="_blank" rel="noopener">Facebook</a></li>
           <li><a href="https://www.instagram.com/vivoocrm/" target="_blank" rel="noopener">Instagram</a></li>
           <li><a href="https://www.linkedin.com/company/vivoo-crm/" target="_blank" rel="noopener">LinkedIn</a></li>
           <li><a href="https://api.whatsapp.com/send?phone=15557480505" target="_blank" rel="noopener">WhatsApp</a></li>
+          <li><a href="/mentions-legales/">Mentions légales</a></li>
+          <li><a href="/conditions/">Conditions d'utilisation</a></li>
+          <li><a href="/privacy/">Politique de confidentialité</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
       <span>© 2026 Technologies Ilema Inc. Vivoo. Tous droits réservés.</span>
-      <span>Québec, Canada</span>
+      <span>Éditeur : <a href="https://ilematec.com" target="_blank" rel="noopener">Technologies Ilema Inc.</a>, Québec, Canada</span>
     </div>
   </div>
 </footer>
 <script>
 document.querySelectorAll('.has-submenu > a').forEach(function (a) {
   a.addEventListener('click', function (e) {
-    if (window.innerWidth <= 800) {
+    if (window.innerWidth <= 1080) {
       e.preventDefault();
       a.parentElement.classList.toggle('open');
       var submenu = a.parentElement.querySelector('.submenu');
@@ -192,6 +211,23 @@ document.querySelectorAll('.has-submenu > a').forEach(function (a) {
     }
   });
 });
+
+(function () {
+  var targets = document.querySelectorAll('.sy-reveal, .vv-reveal');
+  if (!document.documentElement.classList.contains('vv-js') || !('IntersectionObserver' in window)) {
+    targets.forEach(function (el) { el.classList.add('is-visible'); });
+    return;
+  }
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  targets.forEach(function (el) { io.observe(el); });
+})();
 </script>
 </body>
 </html>
