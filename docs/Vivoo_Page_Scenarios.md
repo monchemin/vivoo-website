@@ -5,7 +5,7 @@
 
 ## D'un premier contact à un client fidèle, sans étape manquée
 
-Chaque page module de Vivoo décrit une capacité à la fois. Mais la valeur réelle apparaît quand ces capacités s'enchaînent : un lead ne rencontre jamais un seul module isolément, il traverse un parcours complet. Voici deux exemples concrets de ce que ce parcours peut ressembler.
+Chaque page module de Vivoo décrit une capacité à la fois. Mais la valeur réelle apparaît quand ces capacités s'enchaînent : un lead ne rencontre jamais un seul module isolément, il traverse un parcours complet. Voici trois exemples concrets de ce que ce parcours peut ressembler.
 
 ---
 
@@ -31,10 +31,22 @@ Dans les jours qui suivent, une séquence de messages se déclenche automatiquem
 
 ---
 
+## Scénario 3 — D'un profil de client idéal à la première vente
+
+Vous définissez votre client idéal dans Vivoo : secteur, zone géographique, taille d'entreprise. Vivoo cherche sur Google Maps les commerces qui correspondent et vous les présente sous forme de liste de prospects, prêts à être approchés.
+
+Vous contactez chaque prospect par téléphone, courriel ou WhatsApp, et son statut avance à mesure que la conversation progresse. Dès qu'il répond favorablement, il est converti en profil d'audience Vivoo, avec l'historique de vos échanges, prêt à recevoir une campagne de bienvenue.
+
+Sa première vente, conclue sur Shopify, Square, Clover ou WooCommerce, enrichit automatiquement son profil et l'inscrit à votre programme de fidélisation dès le premier achat.
+
+**Modules mobilisés :** Prospection · Campagnes multicanal · Commerce connecté · Fidélisation
+
+---
+
 ## Questions fréquentes
 
 **Est-ce que je peux créer mes propres scénarios, différents de ces exemples ?**
-Oui. Ces deux scénarios illustrent des combinaisons courantes, mais les modules Vivoo se combinent selon vos propres déclencheurs et canaux — un scénario n'est jamais figé dans un modèle unique.
+Oui. Ces scénarios illustrent des combinaisons courantes, mais les modules Vivoo se combinent selon vos propres déclencheurs et canaux — un scénario n'est jamais figé dans un modèle unique.
 
 **Combien de temps faut-il pour mettre en place un scénario comme ceux-ci ?**
 La mise en place dépend du nombre d'étapes et de canaux impliqués, mais un scénario simple comme ceux présentés ici se configure directement dans la plateforme, sans développement technique.

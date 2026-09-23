@@ -13,7 +13,7 @@ Le module de capture de Vivoo transforme un simple scan en profil d'audience —
 
 **Capture sans friction.** Un client scanne le code QR avec l'appareil photo de son téléphone et atterrit directement dans une conversation WhatsApp ou sur une page de capture — aucune application à télécharger.
 
-**Plusieurs points de capture.** Le même mécanisme fonctionne en boutique, sur une facture, à un événement ou intégré à une page web — chaque contexte peut avoir son propre code, pour savoir d'où vient chaque profil.
+**Plusieurs points de capture.** Le même mécanisme fonctionne en boutique, sur une facture, à un événement ou intégré à une page web — chaque contexte peut avoir son propre code, pour savoir d'où vient chaque profil. Le lien qui accompagne chaque code se personnalise aussi, avec une adresse facile à retenir et à partager plutôt qu'une suite de caractères générée au hasard.
 
 **Ajout automatique à l'audience.** Dès qu'un profil est capté, il rejoint votre audience unifiée — prêt à recevoir une campagne, un scénario d'automatisation, ou simplement à être consulté dans votre historique client.
 

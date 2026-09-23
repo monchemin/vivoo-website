@@ -19,6 +19,10 @@ Le module de rendez-vous de Vivoo permet à votre clientèle de réserver un cr�
 
 **Un point d'entrée dans votre parcours d'engagement.** Une fois le rendez-vous pris, ce moment peut déclencher la suite du parcours — confirmation, relance après visite, invitation à un programme de fidélisation.
 
+**Un lien de réservation à votre image.** Votre page de réservation profite d'une adresse personnalisée, facile à retenir et à partager sur vos réseaux, plutôt que d'un code généré au hasard. L'ancien lien continue de fonctionner si vous l'avez déjà partagé.
+
+**Synchronisé avec Google Agenda.** La synchronisation fonctionne dans les deux sens. Un rendez-vous pris sur Vivoo est ajouté à votre Google Agenda, et un créneau déjà occupé dans Google Agenda bloque aussitôt ce moment sur votre page de réservation, dans le bon fuseau horaire.
+
 ---
 
 ## Questions fréquentes
@@ -32,6 +36,9 @@ Oui. Un rappel est envoyé automatiquement avant le rendez-vous, sur le même ca
 **Ce module convient-il à un professionnel seul ou seulement aux grandes équipes ?**
 Les deux. Un professionnel seul l'utilise pour éliminer les allers-retours de prise de rendez-vous ; une équipe plus grande s'en sert pour structurer les suivis d'un plus grand volume de clients.
 
+**Vivoo se synchronise-t-il avec Google Agenda ?**
+Oui, dans les deux sens. Un rendez-vous pris sur Vivoo apparaît automatiquement dans votre Google Agenda, et un créneau déjà occupé dans Google Agenda se bloque en retour sur votre page de réservation Vivoo, pour éviter les doubles réservations.
+
 ---
 
 ## CTA final
@@ -39,9 +46,3 @@ Les deux. Un professionnel seul l'utilise pour éliminer les allers-retours de p
 **Prêt à laisser votre agenda se remplir tout seul ?**
 
 **[ Demander une démo ]**
-
----
-
-### Note pour Nyemo
-
-À confirmer avant publication : la synchronisation avec un agenda externe (Google Agenda, Outlook) n'est pas mentionnée ici parce que je n'ai pas la confirmation que cette capacité existe. Si c'est le cas, ça vaut la peine de l'ajouter — c'est une question qu'on pose systématiquement à ce type de module (voir l'exemple capturia.io).

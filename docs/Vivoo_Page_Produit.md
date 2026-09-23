@@ -26,7 +26,7 @@ Plutôt qu'une liste de fonctionnalités, pensez à Vivoo comme un parcours en q
 
 ### 1. Acquisition
 
-Tout commence par un code QR. Affiché en boutique, sur une facture ou lors d'un événement, il capture une audience en un geste, sans installation d'application requise. Chaque nouveau profil rejoint automatiquement votre bassin d'audience.
+Tout commence par un code QR, ou par un lien personnalisé facile à partager. Affiché en boutique, sur une facture ou lors d'un événement, il capture une audience en un geste, sans installation d'application requise. Chaque nouveau profil rejoint automatiquement votre bassin d'audience.
 
 ### 2. Engagement
 
