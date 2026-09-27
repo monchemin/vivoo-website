@@ -298,7 +298,7 @@ def build_solution_hub():
     body = f"""
 <section class="sy-page-hero">
   <div class="sy-wrap">
-    {index_label("", "La solution")}
+    {index_label("", "Le produit")}
     <h1 class="sy-display">Le système qui relie toute votre relation client.</h1>
     <p class="sy-lead">De la première interaction au prochain achat, Vivoo connecte chaque étape de votre parcours commercial.</p>
     {flow(["Attirer", "Capter", "Converser", "Convertir", "Vendre", "Fidéliser", "Mesurer"], "sy-flow sy-flow--big")}
@@ -351,7 +351,7 @@ def build_solution_hub():
 {cta()}"""
     page("/solution/", "Le système Vivoo. Vivoo",
          "Acquisition, conversation, conversion, vente, fidélisation et automatisation : découvrez les six pôles du système commercial Vivoo.",
-         "solution", body, trail=[("Accueil", "/"), ("Solution", None)])
+         "solution", body, trail=[("Accueil", "/"), ("Produit", None)])
 
 
 def build_pillar(i, p):
@@ -444,7 +444,7 @@ def build_pillar(i, p):
 {cta()}"""
     page(f"/solution/{p['slug']}/", f"{p['name']}. {p['title'].rstrip('.')}. Vivoo",
          p["lead"], "solution/" + p["slug"], body,
-         trail=[("Accueil", "/"), ("Solution", "/solution/"), (p["name"], None)])
+         trail=[("Accueil", "/"), ("Produit", "/solution/"), (p["name"], None)])
 
 
 # ---------------------------------------------------------------- Solutions par activité

@@ -93,7 +93,7 @@ def build_module(slug, name, pillar, data):
 </section>
 {cta(data['cta'], " ".join(data.get('cta_p') or []) or "Créez votre compte et activez ce module, ou parlez à un spécialiste pour l'intégrer à votre parcours.")}"""
     page(f"/produit/{slug}/", data["title"], data["desc"], "solution/" + pillar, body,
-         trail=[("Accueil", "/"), ("Solution", "/solution/"), (p["name"], f"/solution/{pillar}/"), (name, None)],
+         trail=[("Accueil", "/"), ("Produit", "/solution/"), (p["name"], f"/solution/{pillar}/"), (name, None)],
          extra_ld=data.get("jsonld"))
 
 

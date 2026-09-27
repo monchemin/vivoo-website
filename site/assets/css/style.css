@@ -787,7 +787,7 @@ form.contact-form {
 .submenu.sy-mega { min-width: 300px; padding: 0.6rem 0; }
 .sy-mega a { display: flex !important; align-items: baseline; gap: 0.9em; padding: 0.55em 1.1em; }
 .sy-mega .sy-mega-k {
-  min-width: 7.5em;
+  min-width: 8.6em;
   font-size: 0.66rem;
   font-weight: 600;
   letter-spacing: 0.14em;
@@ -1418,3 +1418,7 @@ a.sy-mock:focus-visible { outline: 3px solid var(--sky); outline-offset: 4px; }
 .sy-legal p, .sy-legal li { color: var(--text); }
 .sy-legal ul { margin-bottom: 1.4em; }
 .sy-legal li { margin-bottom: 0.35em; }
+
+/* Sous-menus : pas de puces */
+.submenu { list-style: none; margin: 0; }
+.submenu li { list-style: none; }

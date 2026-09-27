@@ -1,0 +1,25 @@
+# Vivoo. Sert le site depuis le dossier site/ sans que /site/ apparaisse dans l'URL.
+# À placer à la racine du document (DocumentRoot) de vivoo.pro. Nécessite mod_rewrite.
+
+Options -Indexes
+DirectoryIndex index.html
+
+RewriteEngine On
+RewriteBase /
+
+# 1. Une adresse tapée avec /site/ est redirigée vers sa version propre.
+RewriteCond %{THE_REQUEST} \s/site/([^\s?]*) [NC]
+RewriteRule ^ /%1 [R=301,L,NE]
+
+# Anciennes pages remplacées par la refonte.
+RewriteRule ^produit/?$ /solution/ [R=301,L]
+RewriteRule ^produit/scenarios/?$ /scenarios/ [R=301,L]
+
+# 2. Dossier demandé sans barre finale : on l'ajoute (/tarifs → /tarifs/).
+RewriteCond %{REQUEST_URI} !/$
+RewriteCond %{DOCUMENT_ROOT}/site%{REQUEST_URI} -d
+RewriteRule ^(.*)$ /$1/ [R=301,L]
+
+# 3. Tout le reste est servi depuis site/ (docs/, tools/, etc. ne sont donc pas exposés).
+RewriteCond %{REQUEST_URI} !^/site/
+RewriteRule ^(.*)$ site/$1 [L]

@@ -92,7 +92,7 @@ def header(active=""):
     <button class="nav-toggle" type="button" aria-label="Ouvrir le menu" onclick="document.body.classList.toggle('nav-open')">☰</button>
     <nav class="main-nav" aria-label="Navigation principale">
       <div class="has-submenu">
-        <a href="/solution/"{cur(active, "solution")}>Solution</a>
+        <a href="/solution/"{cur(active, "solution")}>Produit</a>
         <ul class="submenu sy-mega">
           <li><a href="/solution/"><span class="sy-mega-k">Le système</span><span>Vue d'ensemble</span></a></li>
 {sol}
@@ -130,7 +130,7 @@ FOOTER = f"""<footer class="site-footer">
         <p>Vivoo relie vos prospects, vos conversations, vos rendez-vous, vos ventes et vos clients dans un seul système commercial, sur WhatsApp, Instagram, Messenger, courriel et SMS.</p>
       </div>
       <div>
-        <h3>Solution</h3>
+        <h3>Produit</h3>
         <ul>
           <li><a href="/solution/">Le système Vivoo</a></li>
 {chr(10).join(f'          <li><a href="/solution/{s}/">{n}</a></li>' for s, v, n in PILLARS_NAV)}
