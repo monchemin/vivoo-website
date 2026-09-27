@@ -23,3 +23,5 @@ RewriteRule ^(.*)$ /$1/ [R=301,L]
 # 3. Tout le reste est servi depuis site/ (docs/, tools/, etc. ne sont donc pas exposés).
 RewriteCond %{REQUEST_URI} !^/site/
 RewriteRule ^(.*)$ site/$1 [L]
+
+claude.md, memoire.md, changelog.md, spec.md, plan.md
