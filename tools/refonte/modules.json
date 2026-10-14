@@ -1,0 +1,975 @@
+{
+ "capture": {
+  "title": "Capture d'audience par code QR. Vivoo",
+  "desc": "Transformez chaque scan de code QR en profil d'audience, sans application à installer. Découvrez le module de capture d'audience Vivoo.",
+  "jsonld": [
+   {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+     {
+      "@type": "Question",
+      "name": "Le client doit-il installer une application pour être capté ?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "Non. Le scan mène directement à une conversation sur un canal qu'il utilise déjà (WhatsApp, par exemple), ou à une page de capture dans son navigateur."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "Où puis-je afficher mon code QR Vivoo ?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "Partout où un client vous voit physiquement ou virtuellement : en boutique, sur une facture, à un événement, ou intégré à votre site web."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "Que se passe-t-il après qu'un client scanne le code ?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "Son profil est ajouté à votre audience, prêt à être ciblé par une campagne ou à entrer dans un scénario d'automatisation, selon ce que vous avez configuré."
+      }
+     }
+    ]
+   }
+  ],
+  "h1": "Votre prochain client commence par un code QR",
+  "lead": [
+   "Le module de capture de Vivoo transforme un simple scan en profil d'audience. Sans application à installer, sans formulaire à remplir sur papier, sans délai entre le premier contact et son inscription."
+  ],
+  "icon": "<svg width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M4 5a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1l0 -4\" />\n<path d=\"M7 17l0 .01\" />\n<path d=\"M14 5a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1l0 -4\" />\n<path d=\"M7 7l0 .01\" />\n<path d=\"M4 15a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1l0 -4\" />\n<path d=\"M17 7l0 .01\" />\n<path d=\"M14 14l3 0\" />\n<path d=\"M20 14l0 .01\" />\n<path d=\"M14 14l0 3\" />\n<path d=\"M14 20l3 0\" />\n<path d=\"M17 17l3 0\" />\n<path d=\"M20 17l0 3\" /></svg>",
+  "features": [
+   [
+    "Capture sans friction",
+    [
+     "Un client scanne le code QR avec l'appareil photo de son téléphone et atterrit directement dans une conversation WhatsApp ou sur une page de capture. Aucune application à télécharger."
+    ]
+   ],
+   [
+    "Plusieurs points de capture",
+    [
+     "Le même mécanisme fonctionne en boutique, sur une facture, à un événement ou intégré à une page web. Chaque contexte peut avoir son propre code, pour savoir d'où vient chaque profil. Le lien qui accompagne chaque code se personnalise aussi, avec une adresse facile à retenir et à partager plutôt qu'une suite de caractères générée au hasard."
+    ]
+   ],
+   [
+    "Ajout automatique à l'audience",
+    [
+     "Dès qu'un profil est capté, il rejoint votre audience unifiée. Prêt à recevoir une campagne, un scénario d'automatisation, ou simplement à être consulté dans votre historique client."
+    ]
+   ]
+  ],
+  "faq": [
+   [
+    "Le client doit-il installer une application pour être capté ?",
+    [
+     "Non. Le scan mène directement à une conversation sur un canal qu'il utilise déjà (WhatsApp, par exemple), ou à une page de capture dans son navigateur."
+    ]
+   ],
+   [
+    "Où puis-je afficher mon code QR Vivoo ?",
+    [
+     "Partout où un client vous voit physiquement ou virtuellement : en boutique, sur une facture, à un événement, ou intégré à votre site web."
+    ]
+   ],
+   [
+    "Que se passe-t-il après qu'un client scanne le code ?",
+    [
+     "Son profil est ajouté à votre audience, prêt à être ciblé par une campagne ou à entrer dans un scénario d'automatisation, selon ce que vous avez configuré."
+    ]
+   ]
+  ],
+  "cta": "Prêt à transformer chaque scan en client potentiel ?",
+  "cta_p": []
+ },
+ "prospection": {
+  "title": "Prospection avec profil de client idéal. Vivoo",
+  "desc": "Trouvez de nouveaux clients qui correspondent à votre profil idéal grâce à une recherche Google Maps intégrée, et suivez chaque approche jusqu'à la conversion.",
+  "jsonld": [
+   {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+     {
+      "@type": "Question",
+      "name": "Comment Vivoo trouve-t-il des prospects ?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "À partir du profil de client idéal que vous définissez (secteur, zone, taille d'entreprise, rôle du décideur), Vivoo cherche les commerces correspondants directement sur Google Maps."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "Les courriels de prospection sont-ils personnalisés ?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "Oui. En plus du nom du prospect, l'Agent IA peut écrire une phrase d'accroche propre à chaque entreprise, insérée dans votre modèle de courriel avant l'envoi."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "Que se passe-t-il quand un prospect devient client ?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "Il est converti en profil d'audience Vivoo, avec l'historique de vos approches, prêt à entrer dans vos campagnes et vos scénarios d'engagement."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "La prospection est-elle un module séparé à activer ?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "Non. Elle fait partie du CRM Vivoo et suit son activation, sans abonnement distinct à gérer."
+      }
+     }
+    ]
+   }
+  ],
+  "h1": "Trouvez vos prochains clients avant qu'ils vous trouvent",
+  "lead": [
+   "Le module de prospection de Vivoo cherche, pour vous, les commerces qui correspondent à votre client idéal, directement sur Google Maps, puis suit chaque approche jusqu'à la conversion."
+  ],
+  "icon": "<svg width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0\" />\n<path d=\"M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0\" />\n<path d=\"M12 12m-8 0a8 8 0 1 0 16 0a8 8 0 1 0 -16 0\" /></svg>",
+  "features": [
+   [
+    "Un profil de client idéal, à votre façon",
+    [
+     "Définissez votre secteur, votre zone géographique, la taille d'entreprise et le rôle du décideur que vous visez. Vivoo s'en sert pour orienter chaque recherche."
+    ]
+   ],
+   [
+    "Une recherche Google Maps qui fait le travail",
+    [
+     "Vivoo interroge Google Maps selon votre profil et vous ramène une liste de prospects prêts à être approchés : nom, coordonnées, site web, note et avis."
+    ]
+   ],
+   [
+    "Une première phrase écrite pour chaque prospect",
+    [
+     "Dans vos courriels de prospection, l'Agent IA écrit pour chaque prospect une phrase d'accroche tirée de son profil : son activité, sa note, ce qui le rapproche de votre client idéal. Un premier courriel qui ne ressemble pas à un envoi de masse."
+    ]
+   ],
+   [
+    "Un suivi jusqu'à la conversion",
+    [
+     "Chaque prospect avance dans un statut clair, nouveau, à contacter, contacté, en discussion, converti, avec ses tentatives d'approche consignées par appel, courriel, WhatsApp ou SMS."
+    ]
+   ]
+  ],
+  "faq": [
+   [
+    "Comment Vivoo trouve-t-il des prospects ?",
+    [
+     "À partir du profil de client idéal que vous définissez (secteur, zone, taille d'entreprise, rôle du décideur), Vivoo cherche les commerces correspondants directement sur Google Maps."
+    ]
+   ],
+   [
+    "Les courriels de prospection sont-ils personnalisés ?",
+    [
+     "Oui. En plus du nom du prospect, l'Agent IA peut écrire une phrase d'accroche propre à chaque entreprise, insérée dans votre modèle de courriel avant l'envoi."
+    ]
+   ],
+   [
+    "Que se passe-t-il quand un prospect devient client ?",
+    [
+     "Il est converti en profil d'audience Vivoo, avec l'historique de vos approches, prêt à entrer dans vos campagnes et vos scénarios d'engagement."
+    ]
+   ],
+   [
+    "La prospection est-elle un module séparé à activer ?",
+    [
+     "Non. Elle fait partie du CRM Vivoo et suit son activation, sans abonnement distinct à gérer."
+    ]
+   ]
+  ],
+  "cta": "Prêt à sortir de l'attente et à aller chercher vos prochains clients ?",
+  "cta_p": []
+ },
+ "audience-unifiee": {
+  "title": "Audience unifiée multicanal. Vivoo",
+  "desc": "Un seul profil client peu importe le canal : WhatsApp, Messenger, Instagram, SMS ou courriel. Découvrez l'audience unifiée Vivoo.",
+  "jsonld": [
+   {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+     {
+      "@type": "Question",
+      "name": "Si un client m'écrit sur deux canaux différents, est-ce deux profils ou un seul ?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "Un seul. Vivoo associe les interactions au même profil dès qu'il reconnaît qu'il s'agit du même client, peu importe le canal utilisé."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "Puis-je segmenter mon audience pour des campagnes ciblées ?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "Oui. L'audience unifiée sert de base pour créer des segments. Par comportement, par historique d'achat ou par tout autre critère pertinent pour votre commerce."
+      }
+     }
+    ]
+   }
+  ],
+  "h1": "Chaque client, un seul profil. Peu importe le canal",
+  "lead": [
+   "Un client qui vous écrit sur WhatsApp aujourd'hui et sur Messenger la semaine prochaine reste le même profil dans Vivoo. L'audience unifiée élimine les doublons et les silos qui s'accumulent normalement entre canaux."
+  ],
+  "icon": "<svg width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 7a4 4 0 1 0 8 0a4 4 0 1 0 -8 0\" />\n<path d=\"M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2\" />\n<path d=\"M16 3.13a4 4 0 0 1 0 7.75\" />\n<path d=\"M21 21v-2a4 4 0 0 0 -3 -3.85\" /></svg>",
+  "features": [
+   [
+    "Un profil, tous les canaux",
+    [
+     "Peu importe où un client vous contacte. WhatsApp, Messenger, Instagram, SMS ou courriel. Son historique se retrouve au même endroit, jamais éclaté entre plusieurs fiches."
+    ]
+   ],
+   [
+    "Un historique d'engagement consolidé",
+    [
+     "Chaque interaction, chaque achat, chaque rendez-vous pris s'ajoute au même profil. Une vue d'ensemble plutôt que des fragments dispersés."
+    ]
+   ],
+   [
+    "Une base pour cibler, pas seulement archiver",
+    [
+     "Cette audience unifiée sert directement de base à vos campagnes et à vos scénarios d'automatisation : vous ciblez des segments réels, pas des listes déconnectées les unes des autres."
+    ]
+   ]
+  ],
+  "faq": [
+   [
+    "Si un client m'écrit sur deux canaux différents, est-ce deux profils ou un seul ?",
+    [
+     "Un seul. Vivoo associe les interactions au même profil dès qu'il reconnaît qu'il s'agit du même client, peu importe le canal utilisé."
+    ]
+   ],
+   [
+    "Puis-je segmenter mon audience pour des campagnes ciblées ?",
+    [
+     "Oui. L'audience unifiée sert de base pour créer des segments. Par comportement, par historique d'achat ou par tout autre critère pertinent pour votre commerce."
+    ]
+   ]
+  ],
+  "cta": "Prêt à voir votre clientèle comme un tout, pas comme des fragments ?",
+  "cta_p": []
+ },
+ "agent-ia": {
+  "title": "Agent IA sur WhatsApp, Messenger et Instagram. Vivoo",
+  "desc": "L'Agent IA de Vivoo répond à vos clients sur WhatsApp, Messenger et Instagram, présente vos offres et réserve le rendez-vous dans la conversation. Votre équipe garde la main.",
+  "jsonld": [
+   {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+     {
+      "@type": "Question",
+      "name": "Sur quels canaux l'Agent IA répond-il ?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "Sur WhatsApp, Messenger et Instagram. Les conversations arrivent dans la même boîte de réception que vos autres échanges."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "Comment l'agent connaît-il mon entreprise ?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "Vous l'activez depuis vos réglages Vivoo et vous lui décrivez votre entreprise, vos services et votre façon de répondre. Chaque page peut aussi lui donner le contexte de son offre."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "L'agent peut-il prendre des rendez-vous ?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "Oui. Il propose les créneaux disponibles de votre calendrier Vivoo, en respectant vos horaires, l'intervalle entre deux rendez-vous et votre nombre maximum de rendez-vous par jour. Le client choisit dans la conversation et reçoit ses rappels."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "Puis-je reprendre une conversation ?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "Oui, à tout moment, depuis la conversation ou depuis le profil du client. Vous pouvez ensuite la rendre à l'agent."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "Que se passe-t-il si un client envoie un mot-clé ?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "Vos scénarios par mot-clé restent prioritaires : le scénario prévu se déclenche, puis l'agent reprend la conversation."
+      }
+     }
+    ]
+   }
+  ],
+  "h1": "Un agent qui répond, qualifie et réserve, même quand vous n'êtes pas là",
+  "lead": [
+   "L'Agent IA de Vivoo répond à vos clients sur WhatsApp, Messenger et Instagram. Il connaît votre entreprise, présente vos offres, propose vos disponibilités et réserve le rendez-vous sans quitter la conversation. Votre équipe reprend la main quand elle le souhaite."
+  ],
+  "icon": "<svg width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M6 6m0 2a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v4a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2z\" />\n<path d=\"M12 2v2\" />\n<path d=\"M9 12v9\" />\n<path d=\"M15 12v9\" />\n<path d=\"M5 16l4 -2\" />\n<path d=\"M15 14l4 2\" />\n<path d=\"M9 18h6\" />\n<path d=\"M10 8v.01\" />\n<path d=\"M14 8v.01\" /></svg>",
+  "features": [
+   [
+    "Il répond tout de suite, sur vos trois canaux",
+    [
+     "Un message arrive sur WhatsApp, Messenger ou Instagram, de jour comme de nuit : l'Agent IA répond aussitôt, avec ce que vous lui avez appris de votre entreprise, de vos services et de votre façon de travailler."
+    ]
+   ],
+   [
+    "Il réserve sans quitter la conversation",
+    [
+     "Le client veut un rendez-vous ? L'agent lui propose vos disponibilités sous forme de liste, le client choisit, et le rendez-vous est confirmé dans votre agenda Vivoo, avec ses rappels, comme une réservation en ligne."
+    ]
+   ],
+   [
+    "Il présente la bonne offre",
+    [
+     "Un client arrive d'une page précise : l'agent parle de cette offre. S'il en a consulté plusieurs, l'agent lui demande laquelle l'intéresse, puis s'en souvient pour la suite de l'échange."
+    ]
+   ],
+   [
+    "Il relance au bon moment",
+    [
+     "Une conversation est restée sans réponse ? L'agent relance le client avec un message adapté à ce qui s'est dit, au lieu d'un rappel générique."
+    ]
+   ],
+   [
+    "Votre équipe garde la main",
+    [
+     "Un membre de l'équipe peut reprendre une conversation à tout moment, puis la rendre à l'agent. L'agent ne répond jamais dans une conversation prise en charge par une personne."
+    ]
+   ],
+   [
+    "Vos scénarios restent prioritaires",
+    [
+     "Un client écrit un mot-clé qui déclenche un de vos scénarios d'engagement ? Le scénario passe en premier, l'agent prend le relais pour la suite."
+    ]
+   ]
+  ],
+  "extra": [
+   [
+    "Chaque échange s'ajoute au profil client.",
+    [
+     "Ce que l'agent a répondu, le créneau réservé, l'offre présentée : tout reste dans l'historique du client, visible par votre équipe."
+    ],
+    null
+   ]
+  ],
+  "faq": [
+   [
+    "Sur quels canaux l'Agent IA répond-il ?",
+    [
+     "Sur WhatsApp, Messenger et Instagram. Les conversations arrivent dans la même boîte de réception que vos autres échanges."
+    ]
+   ],
+   [
+    "Comment l'agent connaît-il mon entreprise ?",
+    [
+     "Vous l'activez depuis vos réglages Vivoo et vous lui décrivez votre entreprise, vos services et votre façon de répondre. Chaque page peut aussi lui donner le contexte de son offre."
+    ]
+   ],
+   [
+    "L'agent peut-il prendre des rendez-vous ?",
+    [
+     "Oui. Il propose les créneaux disponibles de votre calendrier Vivoo, en respectant vos horaires, l'intervalle entre deux rendez-vous et votre nombre maximum de rendez-vous par jour. Le client choisit dans la conversation et reçoit ses rappels."
+    ]
+   ],
+   [
+    "Puis-je reprendre une conversation ?",
+    [
+     "Oui, à tout moment, depuis la conversation ou depuis le profil du client. Vous pouvez ensuite la rendre à l'agent."
+    ]
+   ],
+   [
+    "Que se passe-t-il si un client envoie un mot-clé ?",
+    [
+     "Vos scénarios par mot-clé restent prioritaires : le scénario prévu se déclenche, puis l'agent reprend la conversation."
+    ]
+   ]
+  ],
+  "cta": "Prêt à répondre à chaque client, même à 23 h un dimanche ?",
+  "cta_p": []
+ },
+ "campagnes": {
+  "title": "Campagnes multicanal. Vivoo",
+  "desc": "Composez une campagne une seule fois et diffusez-la sur cinq canaux à la fois. Découvrez les campagnes multicanal Vivoo.",
+  "jsonld": [
+   {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+     {
+      "@type": "Question",
+      "name": "Puis-je envoyer une campagne à un segment précis de mon audience seulement ?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "Oui. Vous choisissez le segment ciblé avant l'envoi. Pas besoin de rejoindre toute votre audience à chaque campagne."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "Quels canaux sont pris en charge pour les campagnes ?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "WhatsApp, Messenger, Instagram, SMS et courriel. Les cinq canaux gérés par Vivoo, depuis une seule interface."
+      }
+     }
+    ]
+   }
+  ],
+  "h1": "Une campagne, cinq canaux, zéro copier-coller",
+  "lead": [
+   "Composez un message une seule fois et envoyez-le sur WhatsApp, Messenger, Instagram, SMS et courriel depuis la même interface. Sans reproduire la même campagne cinq fois dans cinq outils différents."
+  ],
+  "icon": "<svg width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M18 8a3 3 0 0 1 0 6\" />\n<path d=\"M10 8v11a1 1 0 0 1 -1 1h-1a1 1 0 0 1 -1 -1v-5\" />\n<path d=\"M12 8l4.524 -3.77a.9 .9 0 0 1 1.476 .692v12.156a.9 .9 0 0 1 -1.476 .692l-4.524 -3.77h-8a1 1 0 0 1 -1 -1v-4a1 1 0 0 1 1 -1h8\" /></svg>",
+  "features": [
+   [
+    "Envoi simultané multicanal",
+    [
+     "Une même campagne rejoint votre audience sur les canaux où elle se trouve réellement, sans dupliquer le travail de rédaction ni de configuration."
+    ]
+   ],
+   [
+    "Segmentation ciblée",
+    [
+     "Une campagne ne part jamais à toute votre audience par défaut. Vous choisissez le segment précis à qui elle s'adresse, selon le comportement ou l'historique de chaque profil."
+    ]
+   ],
+   [
+    "Suivi de l'engagement généré",
+    [
+     "Chaque campagne montre ce qu'elle a produit. Ouvertures, réponses, actions concrètes. Pour savoir ce qui fonctionne avant d'en lancer une autre."
+    ]
+   ]
+  ],
+  "faq": [
+   [
+    "Puis-je envoyer une campagne à un segment précis de mon audience seulement ?",
+    [
+     "Oui. Vous choisissez le segment ciblé avant l'envoi. Pas besoin de rejoindre toute votre audience à chaque campagne."
+    ]
+   ],
+   [
+    "Quels canaux sont pris en charge pour les campagnes ?",
+    [
+     "WhatsApp, Messenger, Instagram, SMS et courriel. Les cinq canaux gérés par Vivoo, depuis une seule interface."
+    ]
+   ]
+  ],
+  "cta": "Prêt à arrêter de recomposer la même campagne cinq fois ?",
+  "cta_p": []
+ },
+ "automatisation": {
+  "title": "Automatisation marketing. Vivoo",
+  "desc": "Automatisation programmée, par mots-clés et séquences : vos scénarios d'engagement tournent sans intervention manuelle avec Vivoo.",
+  "jsonld": [
+   {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+     {
+      "@type": "Question",
+      "name": "Quelle est la différence entre une automatisation programmée et une séquence ?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "Une automatisation programmée envoie un seul message à un moment précis. Une séquence enchaîne plusieurs messages dans le temps, déclenchés les uns après les autres à partir d'un même point de départ."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "Un client peut-il déclencher une automatisation lui-même ?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "Oui, par mot-clé. Si un client écrit un mot précis que vous avez configuré, Vivoo répond ou déclenche une action automatiquement, sans intervention de votre équipe."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "Faut-il des compétences techniques pour configurer une automatisation ?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "Non. La configuration se fait directement dans la plateforme Vivoo, sans connaissance en programmation."
+      }
+     }
+    ]
+   }
+  ],
+  "h1": "Vos scénarios d'engagement tournent, même quand vous n'y êtes pas",
+  "lead": [
+   "Le module d'automatisation de Vivoo déclenche des messages sans intervention manuelle. À un moment précis, en réponse à un mot reçu, ou selon une séquence complète qui se déroule dans le temps."
+  ],
+  "icon": "<svg width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M6 6a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v4a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2l0 -4\" />\n<path d=\"M12 2v2\" />\n<path d=\"M9 12v9\" />\n<path d=\"M15 12v9\" />\n<path d=\"M5 16l4 -2\" />\n<path d=\"M15 14l4 2\" />\n<path d=\"M9 18h6\" />\n<path d=\"M10 8v.01\" />\n<path d=\"M14 8v.01\" /></svg>",
+  "features": [
+   [
+    "Automatisation programmée",
+    [
+     "Programmez l'envoi d'un message à une date et une heure précises, ou après un délai défini. Par exemple 30 jours après le dernier achat d'un client. Sans avoir à y penser à chaque fois."
+    ]
+   ],
+   [
+    "Automatisation par mots-clés",
+    [
+     "Un message reçu contenant un mot-clé précis déclenche automatiquement une réponse ou une action. Un client écrit « HORAIRE » et reçoit vos heures d'ouverture à l'instant, sans attendre une réponse de votre équipe. Si l'Agent IA est activé, le mot-clé reste prioritaire : le scénario part d'abord, l'agent reprend ensuite."
+    ]
+   ],
+   [
+    "Séquences",
+    [
+     "Un ensemble de messages s'enchaîne automatiquement dans le temps à partir d'un même déclencheur. Utile pour un parcours de bienvenue en plusieurs étapes ou une relance progressive plutôt qu'un message unique."
+    ]
+   ]
+  ],
+  "faq": [
+   [
+    "Quelle est la différence entre une automatisation programmée et une séquence ?",
+    [
+     "Une automatisation programmée envoie un seul message à un moment précis. Une séquence enchaîne plusieurs messages dans le temps, déclenchés les uns après les autres à partir d'un même point de départ."
+    ]
+   ],
+   [
+    "Un client peut-il déclencher une automatisation lui-même ?",
+    [
+     "Oui, par mot-clé. Si un client écrit un mot précis que vous avez configuré, Vivoo répond ou déclenche une action automatiquement, sans intervention de votre équipe."
+    ]
+   ],
+   [
+    "Faut-il des compétences techniques pour configurer une automatisation ?",
+    [
+     "Non. La configuration se fait directement dans la plateforme Vivoo, sans connaissance en programmation."
+    ]
+   ]
+  ],
+  "cta": "Prêt à laisser vos scénarios d'engagement tourner tout seuls ?",
+  "cta_p": []
+ },
+ "rendez-vous": {
+  "title": "Prise de rendez-vous automatisée. Vivoo",
+  "desc": "Laissez votre clientèle réserver un créneau directement dans une conversation WhatsApp ou Messenger, avec rappels automatiques. Découvrez le module Rendez-vous Vivoo.",
+  "jsonld": [
+   {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+     {
+      "@type": "Question",
+      "name": "Comment un client prend-il rendez-vous avec Vivoo ?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "En ligne, à partir de votre lien de réservation ou d'une page, ou directement dans une conversation WhatsApp, Messenger ou Instagram : l'Agent IA lui propose les créneaux disponibles et il choisit, sans avoir à vous écrire pour demander vos disponibilités."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "Les rappels de rendez-vous sont-ils automatiques ?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "Oui. Un rappel est envoyé automatiquement avant le rendez-vous, sur le même canal que celui utilisé pour la prise de rendez-vous."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "Puis-je limiter le nombre de rendez-vous par jour ?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "Oui. Pour chaque calendrier, vous définissez vos horaires, l'intervalle à garder entre deux rendez-vous et le nombre maximum de rendez-vous par jour. Les créneaux proposés, en ligne comme dans la conversation, en tiennent compte."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "Ce module convient-il à un professionnel seul ou seulement aux grandes équipes ?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "Les deux. Un professionnel seul l'utilise pour éliminer les allers-retours de prise de rendez-vous ; une équipe plus grande s'en sert pour structurer les suivis d'un plus grand volume de clients."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "Vivoo se synchronise-t-il avec Google Agenda ?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "Oui, dans les deux sens. Un rendez-vous pris sur Vivoo apparaît automatiquement dans votre Google Agenda, et un créneau déjà occupé dans Google Agenda se bloque en retour sur votre page de réservation Vivoo, pour éviter les doubles réservations."
+      }
+     }
+    ]
+   }
+  ],
+  "h1": "Votre agenda se remplit sans un seul appel",
+  "lead": [
+   "Le module de rendez-vous de Vivoo permet à votre clientèle de réserver un créneau directement dans une conversation WhatsApp, Messenger ou depuis votre page de capture. Sans échange de disponibilités par téléphone ou par message."
+  ],
+  "icon": "<svg width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2l0 -12\" />\n<path d=\"M16 3l0 4\" />\n<path d=\"M8 3l0 4\" />\n<path d=\"M4 11l16 0\" />\n<path d=\"M8 15h2v2h-2l0 -2\" /></svg>",
+  "features": [
+   [
+    "Réservation en toute autonomie",
+    [
+     "Le client choisit son créneau en ligne, ou directement dans la conversation sur WhatsApp, Messenger ou Instagram : l'Agent IA lui propose vos disponibilités et confirme le rendez-vous, sans attendre une réponse de votre équipe."
+    ]
+   ],
+   [
+    "Un rendez-vous rattaché au bon profil",
+    [
+     "Chaque réservation s'ajoute automatiquement au profil d'audience du client. Utile pour comprendre ses habitudes et personnaliser le suivi."
+    ]
+   ],
+   [
+    "Des rappels qui s'envoient d'eux-mêmes",
+    [
+     "Un rappel est envoyé avant le rendez-vous, sur le canal où le client a pris contact, pour réduire les absences."
+    ]
+   ],
+   [
+    "Un point d'entrée dans votre parcours d'engagement",
+    [
+     "Une fois le rendez-vous pris, ce moment peut déclencher la suite du parcours. Confirmation, relance après visite, invitation à un programme de fidélisation."
+    ]
+   ],
+   [
+    "Un lien de réservation à votre image",
+    [
+     "Votre page de réservation profite d'une adresse personnalisée, facile à retenir et à partager sur vos réseaux, plutôt que d'un code généré au hasard. L'ancien lien continue de fonctionner si vous l'avez déjà partagé."
+    ]
+   ],
+   [
+    "Synchronisé avec Google Agenda",
+    [
+     "La synchronisation fonctionne dans les deux sens. Un rendez-vous pris sur Vivoo est ajouté à votre Google Agenda, et un créneau déjà occupé dans Google Agenda bloque aussitôt ce moment sur votre page de réservation, dans le bon fuseau horaire."
+    ]
+   ]
+  ],
+  "faq": [
+   [
+    "Comment un client prend-il rendez-vous avec Vivoo ?",
+    [
+     "En ligne, à partir de votre lien de réservation ou d'une page, ou directement dans une conversation WhatsApp, Messenger ou Instagram : l'Agent IA lui propose les créneaux disponibles et il choisit, sans avoir à vous écrire pour demander vos disponibilités."
+    ]
+   ],
+   [
+    "Les rappels de rendez-vous sont-ils automatiques ?",
+    [
+     "Oui. Un rappel est envoyé automatiquement avant le rendez-vous, sur le même canal que celui utilisé pour la prise de rendez-vous."
+    ]
+   ],
+   [
+    "Puis-je limiter le nombre de rendez-vous par jour ?",
+    [
+     "Oui. Pour chaque calendrier, vous définissez vos horaires, l'intervalle à garder entre deux rendez-vous et le nombre maximum de rendez-vous par jour. Les créneaux proposés, en ligne comme dans la conversation, en tiennent compte."
+    ]
+   ],
+   [
+    "Ce module convient-il à un professionnel seul ou seulement aux grandes équipes ?",
+    [
+     "Les deux. Un professionnel seul l'utilise pour éliminer les allers-retours de prise de rendez-vous ; une équipe plus grande s'en sert pour structurer les suivis d'un plus grand volume de clients."
+    ]
+   ],
+   [
+    "Vivoo se synchronise-t-il avec Google Agenda ?",
+    [
+     "Oui, dans les deux sens. Un rendez-vous pris sur Vivoo apparaît automatiquement dans votre Google Agenda, et un créneau déjà occupé dans Google Agenda se bloque en retour sur votre page de réservation Vivoo, pour éviter les doubles réservations."
+    ]
+   ]
+  ],
+  "cta": "Prêt à laisser votre agenda se remplir tout seul ?",
+  "cta_p": []
+ },
+ "commerce": {
+  "title": "Commerce connecté. Shopify, Square, Clover, WooCommerce. Vivoo",
+  "desc": "Connectez Shopify, Square, Clover ou WooCommerce à Vivoo. Chaque vente enrichit automatiquement le profil du client, et vos récompenses de fidélité s'utilisent directement au paiement.",
+  "jsonld": [
+   {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+     {
+      "@type": "Question",
+      "name": "Quelles plateformes de vente Vivoo prend-il en charge ?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "Shopify, Square, Clover et WooCommerce, avec la même synchronisation automatique des ventes et des récompenses de fidélité."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "Dois-je ressaisir mes ventes dans Vivoo ?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "Non. Une fois votre plateforme connectée, chaque vente crée ou met à jour le profil du client dans Vivoo automatiquement."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "Mes points de fidélité restent-ils valides si je change de plateforme de vente ?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "Oui. Les points et les règles de fidélité vivent dans Vivoo, pas dans la plateforme de vente. Celle-ci sert uniquement à exécuter la récompense au moment du paiement."
+      }
+     }
+    ]
+   }
+  ],
+  "h1": "Chaque vente devient un profil client, automatiquement",
+  "lead": [
+   "Le module commerce de Vivoo relie votre plateforme de vente à votre audience. Connectez Shopify, Square, Clover ou WooCommerce, et chaque achat enrichit le profil du client sans ressaisie."
+  ],
+  "icon": "<svg width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M6 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0\" />\n<path d=\"M17 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0\" />\n<path d=\"M17 17h-11v-14h-2\" />\n<path d=\"M6 5l14 1l-1 7h-13\" /></svg>",
+  "features": [
+   [
+    "Vente synchronisée en temps réel",
+    [
+     "Chaque commande Shopify, Square, Clover ou WooCommerce crée ou met à jour automatiquement le profil du client dans Vivoo, avec sa facture et son historique d'achat."
+    ]
+   ],
+   [
+    "Récompenses de fidélité au point de vente",
+    [
+     "Une récompense gagnée dans le programme de fidélisation Vivoo, points ou réduction, s'utilise directement au moment du paiement, sur la plateforme où le client achète."
+    ]
+   ],
+   [
+    "Une seule source de vérité pour les points",
+    [
+     "Vivoo reste le système maître de la fidélité peu importe la plateforme de vente utilisée. Le client accumule et dépense ses points au même endroit, même s'il achète sur plusieurs canaux."
+    ]
+   ]
+  ],
+  "faq": [
+   [
+    "Quelles plateformes de vente Vivoo prend-il en charge ?",
+    [
+     "Shopify, Square, Clover et WooCommerce, avec la même synchronisation automatique des ventes et des récompenses de fidélité."
+    ]
+   ],
+   [
+    "Dois-je ressaisir mes ventes dans Vivoo ?",
+    [
+     "Non. Une fois votre plateforme connectée, chaque vente crée ou met à jour le profil du client dans Vivoo automatiquement."
+    ]
+   ],
+   [
+    "Mes points de fidélité restent-ils valides si je change de plateforme de vente ?",
+    [
+     "Oui. Les points et les règles de fidélité vivent dans Vivoo, pas dans la plateforme de vente. Celle-ci sert uniquement à exécuter la récompense au moment du paiement."
+    ]
+   ]
+  ],
+  "cta": "Prêt à connecter votre point de vente à votre audience ?",
+  "cta_p": []
+ },
+ "evenements": {
+  "title": "Gestion d'événements. Vivoo",
+  "desc": "Inscription, suivi et communications automatiques pour vos événements, sans feuille de calcul ni relance manuelle. Découvrez le module Événements Vivoo.",
+  "jsonld": [
+   {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+     {
+      "@type": "Question",
+      "name": "Comment les invités s'inscrivent-ils à un événement ?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "Par un lien ou un code QR dédié à l'événement, qui les mène directement à une inscription. Sans formulaire papier."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "Puis-je envoyer un rappel automatique avant l'événement ?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "Oui, via le module d'automatisation. Un rappel programmé peut être envoyé à tous les inscrits avant la date de l'événement."
+      }
+     }
+    ]
+   }
+  ],
+  "h1": "Un événement, une liste d'invités, aucun suivi manuel",
+  "lead": [
+   "Que ce soit un lancement, une formation ou une soirée portes ouvertes, le module d'événements de Vivoo gère l'inscription et le suivi sans feuille de calcul ni relance manuelle."
+  ],
+  "icon": "<svg width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M15 5l0 2\" />\n<path d=\"M15 11l0 2\" />\n<path d=\"M15 17l0 2\" />\n<path d=\"M5 5h14a2 2 0 0 1 2 2v3a2 2 0 0 0 0 4v3a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-3a2 2 0 0 0 0 -4v-3a2 2 0 0 1 2 -2\" /></svg>",
+  "features": [
+   [
+    "Inscription simplifiée",
+    [
+     "Un lien ou un code QR dédié à l'événement suffit. L'invité s'inscrit directement, sans formulaire papier ni échange de courriels."
+    ]
+   ],
+   [
+    "Suivi dans l'audience unifiée",
+    [
+     "Chaque inscrit rejoint votre audience captée, avec l'événement comme point d'origine. Utile pour cibler des suivis pertinents par la suite."
+    ]
+   ],
+   [
+    "Communications automatiques",
+    [
+     "Des messages peuvent être programmés avant l'événement (rappel) et après (remerciement, suivi), sans intervention manuelle une fois configurés."
+    ]
+   ]
+  ],
+  "faq": [
+   [
+    "Comment les invités s'inscrivent-ils à un événement ?",
+    [
+     "Par un lien ou un code QR dédié à l'événement, qui les mène directement à une inscription. Sans formulaire papier."
+    ]
+   ],
+   [
+    "Puis-je envoyer un rappel automatique avant l'événement ?",
+    [
+     "Oui, via le module d'automatisation. Un rappel programmé peut être envoyé à tous les inscrits avant la date de l'événement."
+    ]
+   ]
+  ],
+  "cta": "Prêt à organiser votre prochain événement sans feuille de calcul ?",
+  "cta_p": []
+ },
+ "fidelisation": {
+  "title": "Programme de fidélisation. Vivoo",
+  "desc": "Points proportionnels aux achats, paliers de récompenses et relances automatiques après inactivité. Découvrez le programme de fidélisation Vivoo.",
+  "jsonld": [
+   {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+     {
+      "@type": "Question",
+      "name": "Comment les points de fidélité sont-ils calculés ?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "Selon un ratio proportionnel au montant dépensé, entièrement configurable. Vous décidez combien un achat donné rapporte de points."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "Que se passe-t-il si un client est inactif pendant longtemps ?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "Une relance automatique se déclenche après la période d'inactivité que vous avez définie, sans intervention manuelle de votre équipe."
+      }
+     }
+    ]
+   }
+  ],
+  "h1": "La fidélité de vos clients, sur pilote automatique",
+  "lead": [
+   "Un programme de fidélisation qui repose sur la mémoire de votre équipe finit toujours par s'essouffler. Vivoo transforme chaque achat en points, et chaque période d'inactivité en occasion de relance. Automatiquement."
+  ],
+  "icon": "<svg width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M3 9a1 1 0 0 1 1 -1h16a1 1 0 0 1 1 1v2a1 1 0 0 1 -1 1h-16a1 1 0 0 1 -1 -1l0 -2\" />\n<path d=\"M12 8l0 13\" />\n<path d=\"M19 12v7a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-7\" />\n<path d=\"M7.5 8a2.5 2.5 0 0 1 0 -5a4.8 8 0 0 1 4.5 5a4.8 8 0 0 1 4.5 -5a2.5 2.5 0 0 1 0 5\" /></svg>",
+  "features": [
+   [
+    "Des points proportionnels aux achats",
+    [
+     "Chaque achat génère des points selon un ratio que vous configurez. Pas un point fixe par visite, mais une récompense qui reflète réellement la valeur de la transaction."
+    ]
+   ],
+   [
+    "Des paliers de récompenses",
+    [
+     "Vous définissez les seuils qui débloquent des avantages, pour donner à votre clientèle une raison concrète de revenir plus souvent."
+    ]
+   ],
+   [
+    "Une relance automatique après inactivité",
+    [
+     "Après une période sans visite que vous définissez, un message de relance se déclenche de lui-même. La fidélisation ne dépend plus d'y penser au bon moment."
+    ]
+   ]
+  ],
+  "faq": [
+   [
+    "Comment les points de fidélité sont-ils calculés ?",
+    [
+     "Selon un ratio proportionnel au montant dépensé, entièrement configurable. Vous décidez combien un achat donné rapporte de points."
+    ]
+   ],
+   [
+    "Que se passe-t-il si un client est inactif pendant longtemps ?",
+    [
+     "Une relance automatique se déclenche après la période d'inactivité que vous avez définie, sans intervention manuelle de votre équipe."
+    ]
+   ]
+  ],
+  "cta": "Prêt à faire de la fidélisation un système, pas un effort constant ?",
+  "cta_p": []
+ },
+ "reputation": {
+  "title": "Module Réputation. Vivoo",
+  "desc": "Collectez les avis clients automatiquement, transformez-les en témoignages et renforcez votre présence en ligne avec le module Réputation de Vivoo.",
+  "jsonld": [
+   {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+     {
+      "@type": "Question",
+      "name": "Comment les avis clients sont-ils collectés ?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "Automatiquement, après un achat, un rendez-vous, une prestation ou un événement. Vivoo demande une note de satisfaction sur 5 et, en option, la probabilité que le client vous recommande."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "Que deviennent les avis positifs ?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "Vous pouvez sélectionner les meilleurs et les transformer en témoignages, affichés sur vos pages de contact, de capture ou de conversion. Les clients les plus satisfaits peuvent aussi être invités à laisser un avis public sur votre fiche Google."
+      }
+     }
+    ]
+   }
+  ],
+  "h1": "Transformez vos clients satisfaits en ambassadeurs",
+  "lead": [
+   "Vos clients sont votre meilleure publicité, mais leur satisfaction reste invisible si personne ne la mesure. Le module Réputation de Vivoo automatise la demande d'avis après un achat, un rendez-vous ou une prestation, puis transforme les meilleurs retours en témoignages et en avis publics qui renforcent la confiance des futurs clients."
+  ],
+  "icon": "<svg width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z\" /></svg>",
+  "features": [
+   [
+    "Collecte automatique des avis",
+    [
+     "Après un achat, un rendez-vous, une prestation ou un événement, Vivoo demande automatiquement l'avis du client : une note de satisfaction sur 5, et en option, la probabilité qu'il vous recommande à son entourage."
+    ]
+   ],
+   [
+    "Des témoignages qui vendent pour vous",
+    [
+     "Sélectionnez les meilleurs avis reçus et transformez-les en témoignages diffusés sur vos pages de contact, de capture, de conversion et dans vos contenus marketing."
+    ]
+   ],
+   [
+    "Une présence en ligne renforcée",
+    [
+     "Lorsqu'un client est satisfait, Vivoo l'invite à partager son expérience sur votre fiche Google, pour renforcer votre crédibilité, votre visibilité locale et la confiance des nouveaux clients."
+    ]
+   ]
+  ],
+  "extra": [
+   [
+    "Un tableau de bord pour suivre votre réputation",
+    [
+     "D'un coup d'œil, visualisez la note moyenne, le nombre d'avis reçus et son évolution dans le temps, ainsi qu'un score de recommandation qui vous aide à identifier les clients à fidéliser en priorité."
+    ],
+    ""
+   ]
+  ],
+  "faq": [
+   [
+    "Comment les avis clients sont-ils collectés ?",
+    [
+     "Automatiquement, après un achat, un rendez-vous, une prestation ou un événement. Vivoo demande une note de satisfaction sur 5 et, en option, la probabilité que le client vous recommande."
+    ]
+   ],
+   [
+    "Que deviennent les avis positifs ?",
+    [
+     "Vous pouvez sélectionner les meilleurs et les transformer en témoignages, affichés sur vos pages de contact, de capture ou de conversion. Les clients les plus satisfaits peuvent aussi être invités à laisser un avis public sur votre fiche Google."
+    ]
+   ]
+  ],
+  "cta": "Prêt à transformer vos clients satisfaits en ambassadeurs ?",
+  "cta_p": []
+ }
+}

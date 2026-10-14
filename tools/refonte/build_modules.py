@@ -14,6 +14,7 @@ MODULES = [
     ("capture", "Capture d'audience", "acquisition"),
     ("prospection", "Prospection", "acquisition"),
     ("audience-unifiee", "Audience unifiée", "conversation"),
+    ("agent-ia", "Agent IA", "conversation"),
     ("rendez-vous", "Rendez-vous", "conversion"),
     ("commerce", "Commerce connecté", "vente"),
     ("evenements", "Gestion d'événements", "vente"),

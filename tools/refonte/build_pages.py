@@ -5,7 +5,7 @@ PMAP = {p["slug"]: p for p in PILLARS}
 SYSTEM = [
     ("Attirer", ["Prospection", "Pages", "Codes QR", "Campagnes"]),
     ("Capter", ["Formulaires", "Conversations", "Contacts"]),
-    ("Converser", ["WhatsApp", "Instagram", "Messenger", "Courriel · SMS"]),
+    ("Converser", ["WhatsApp", "Instagram", "Messenger", "Courriel · SMS", "Agent IA"]),
     ("Convertir", ["Qualification", "Rendez-vous", "Pages de vente", "Paiement"]),
     ("Vendre", ["Produits", "Services", "Commandes", "Événements"]),
     ("Fidéliser", ["Campagnes", "Points", "Relances", "Avis"]),
@@ -162,8 +162,8 @@ def build_home():
     <div>
       {index_label("04", "Vivoo en action")}
       <h2 class="sy-h2">Un client découvre votre entreprise.</h2>
-      <p class="sy-lead">Il voit une publicité, arrive sur votre page, vous écrit sur WhatsApp, prend rendez-vous, achète, laisse un avis et revient un mois plus tard. Pour lui, ce sont plusieurs moments. Pour Vivoo, c'est une seule relation.</p>
-      {flow(["Publicité", "Page", "WhatsApp", "Contact", "Rendez-vous", "Vente", "Avis", "Relance", "Retour"], "sy-flow sy-flow--big")}
+      <p class="sy-lead">Il voit une publicité, arrive sur votre page, vous écrit sur Instagram. L'Agent IA lui répond et il réserve sans quitter la conversation. Il achète, laisse un avis et revient un mois plus tard. Pour lui, ce sont plusieurs moments. Pour Vivoo, c'est une seule relation.</p>
+      {flow(["Publicité", "Page", "Instagram", "Agent IA", "Rendez-vous", "Vente", "Avis", "Relance", "Retour"], "sy-flow sy-flow--big")}
       <div class="sy-actions"><a class="sy-link" href="/scenarios/">Voir les scénarios →</a></div>
     </div>
     <figure style="margin:0">
@@ -177,8 +177,8 @@ def build_home():
         <ol class="sy-timeline">
           <li><span class="sy-ch">Meta</span><b>Clic sur la publicité</b><time>3 mars</time></li>
           <li><span class="sy-ch">Page</span><b>Contact créé</b><time>3 mars</time></li>
-          <li><span class="sy-ch">WhatsApp</span><b>Conversation qualifiée</b><time>3 mars</time></li>
-          <li><span class="sy-ch">Agenda</span><b>Rendez-vous confirmé</b><time>6 mars</time></li>
+          <li><span class="sy-ch">Instagram</span><b>L'Agent IA répond et qualifie</b><time>3 mars</time></li>
+          <li><span class="sy-ch">Agenda</span><b>Rendez-vous réservé dans la conversation</b><time>3 mars</time></li>
           <li><span class="sy-ch">Commerce</span><b>Vente enregistrée</b><time>6 mars</time></li>
           <li><span class="sy-ch">Courriel</span><b>Avis 5 étoiles reçu</b><time>7 mars</time></li>
           <li><span class="sy-ch">SMS</span><b>Relance automatique</b><time>5 avril</time></li>

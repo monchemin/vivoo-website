@@ -70,6 +70,12 @@ FAQ = [
         ("Quels canaux Vivoo prend-il en charge ?", "Vivoo réunit cinq canaux dans une seule plateforme : WhatsApp, Messenger, Instagram, SMS et courriel. Chaque profil client reste unifié peu importe le canal utilisé pour vous contacter."),
         ("Les modules de Vivoo fonctionnent-ils ensemble ou séparément ?", "Ensemble. Une publicité, une page de capture, une automatisation et un rendez-vous peuvent s'enchaîner dans un même parcours. Voir des exemples concrets sur la page Scénarios."),
     ]),
+    ("Agent IA et intégrations", [
+        ("Qu'est-ce que l'Agent IA de Vivoo ?", "Un agent qui répond à vos clients sur WhatsApp, Messenger et Instagram, de jour comme de nuit. Il connaît votre entreprise, présente vos offres, propose vos disponibilités et réserve le rendez-vous sans quitter la conversation."),
+        ("Puis-je reprendre une conversation menée par l'Agent IA ?", "Oui, à tout moment. L'agent ne répond jamais dans une conversation prise en charge par une personne de votre équipe, et vous pouvez la lui rendre ensuite."),
+        ("Mes clients peuvent-ils réserver sans quitter la conversation ?", "Oui. Sur WhatsApp, Messenger et Instagram, l'Agent IA propose les créneaux disponibles de votre calendrier, le client choisit et reçoit sa confirmation et ses rappels."),
+        ("Vivoo peut-il envoyer ses données à mes autres outils ?", "Oui. Nouveaux leads, rendez-vous, messages et commentaires reçus : Vivoo les envoie à votre CRM, à Zapier, à Make ou à n8n, et reçoit vos leads, vos clients et vos commandes. Voir la page Intégrations."),
+    ]),
     ("Partenariat", [
         ("Comment fonctionne le modèle de partenariat Vivoo ?", "Vivoo fonctionne selon un modèle à trois niveaux : Vivoo opère la plateforme, un réseau de partenaires déploie Vivoo auprès de son portefeuille de marchands, et chaque marchand l'utilise pour engager sa propre clientèle."),
     ]),
@@ -173,7 +179,7 @@ def build_partners():
       <p class="sy-lead">Ce modèle vous laisse l'autonomie commerciale complète sur votre marché, pendant que nous assurons la fiabilité de la plateforme derrière vous.</p>
     </div>
     <ol class="sy-steps sy-steps--3">
-      <li><span class="sy-step-num">01</span><h3>Vivoo</h3><p>Développe et opère la plateforme : les canaux, les campagnes, les scénarios de fidélisation, les intégrations. C'est notre responsabilité, en continu.</p></li>
+      <li><span class="sy-step-num">01</span><h3>Vivoo</h3><p>Développe et opère la plateforme : les canaux, l'Agent IA, les campagnes, les scénarios de fidélisation, les intégrations avec les outils de vos marchands. C'est notre responsabilité, en continu.</p></li>
       <li><span class="sy-step-num">02</span><h3>Le partenaire</h3><p>C'est vous. Vous recrutez et accompagnez votre portefeuille de marchands, vous définissez vos conditions commerciales et vous êtes leur interlocuteur au quotidien.</p></li>
       <li><span class="sy-step-num">03</span><h3>Le marchand</h3><p>Utilise Vivoo pour engager sa propre clientèle : capter une audience, lancer des campagnes, faire vivre un programme de fidélisation, sans gérer directement la relation avec Vivoo.</p></li>
     </ol>
@@ -216,6 +222,77 @@ def build_partners():
     page("/partenaires/", d["title"], d["desc"], "apropos", body, trail=[("Accueil", "/"), ("Partenaires", None)], extra_ld=d["jsonld"])
 
 
+# ---------------------------------------------------------------- Intégrations
+
+INTEGRATION_EVENTS = [
+    ("Nouveau lead", "Un contact est créé dans Vivoo, avec la page d'où il vient quand il arrive d'une page."),
+    ("Lead devenu client", "Le contact passe à l'achat."),
+    ("Contact modifié", "Ses informations changent, ou il remplit de nouveau une de vos pages."),
+    ("Rendez-vous pris", "Une réservation arrive, en ligne ou dans une conversation."),
+    ("Rendez-vous modifié", "Il est déplacé, annulé, confirmé ou effectué."),
+    ("Messages reçus", "Un client vous écrit sur WhatsApp, Messenger ou Instagram, canal par canal."),
+    ("Commentaires reçus", "Quelqu'un commente une publication de votre page Facebook ou de votre compte Instagram."),
+]
+INTEGRATION_FAQ = [
+    ("Faut-il un développeur ?", "Non pour Zapier, Make ou n8n : vous collez l'adresse qu'ils vous donnent et vous cochez les événements. Un développeur n'est utile que pour brancher votre propre application."),
+    ("Les messages de mes clients sont-ils transmis à mes outils ?", "Seulement si vous le décidez : les messages et les commentaires sont des événements à cocher, canal par canal."),
+    ("Comment mon outil sait-il que l'envoi vient bien de Vivoo ?", "Chaque envoi est signé avec un secret que vous seul connaissez. Votre outil vérifie la signature avant de traiter l'événement."),
+]
+
+
+def build_integrations():
+    events = "".join(f"<li><h3>{n}</h3><p>{d}</p><span></span></li>" for n, d in INTEGRATION_EVENTS)
+    tech = [
+        "Chaque événement est envoyé en POST, au format JSON : identifiant, type, version, date, compte et données.",
+        "Chaque envoi est signé avec votre secret (en-tête Vivoo-Signature, HMAC SHA-256 avec horodatage).",
+        "L'identifiant de l'événement permet d'ignorer un envoi reçu deux fois.",
+        "En cas d'échec, Vivoo réessaie à intervalles croissants pendant plus d'une journée, et vous prévient si l'adresse ne répond plus pendant plusieurs jours.",
+        "Un journal des envois et un bouton de test sont disponibles dans vos réglages, jusqu'à trois adresses par compte.",
+    ]
+    faq = "".join(f'<div class="faq-item"><h3>{q}</h3><p>{a}</p></div>' for q, a in INTEGRATION_FAQ)
+    ld = [{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
+        {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in INTEGRATION_FAQ]}]
+    body = hero("Intégrations", "Vivoo s'intègre à vos outils.",
+                "Votre CRM, votre tableur, Zapier, Make ou n8n : Vivoo leur transmet ce qui se passe dans votre système commercial, et reçoit ce qu'ils savent de vos clients. Vos outils restent à jour, sans double saisie.") + f"""
+<section class="sy-section sy-reveal">
+  <div class="sy-wrap">
+    <div class="sy-head sy-head--split">
+      <div>{index_label("01", "Vivoo informe vos outils")}<h2 class="sy-h2">Chaque événement, au moment où il se produit.</h2></div>
+      <p class="sy-lead">Vous choisissez les événements à recevoir et l'adresse où les envoyer. Les messages et les commentaires ne sont transmis que si vous les cochez.</p>
+    </div>
+    <ul class="sy-items">{events}</ul>
+  </div>
+</section>
+
+<section class="sy-section sy-alt sy-reveal">
+  <div class="sy-wrap sy-split">
+    <div>{index_label("02", "Vos outils alimentent Vivoo")}<h2 class="sy-h2">Ce que vos outils savent, Vivoo le sait aussi.</h2></div>
+    <div>
+      <p class="sy-lead"><strong>Votre boutique en ligne.</strong> Shopify, WooCommerce, Square ou Clover : vos ventes s'ajoutent au profil de chaque client.</p>
+      <p class="sy-lead"><strong>Vos formulaires et vos applications.</strong> L'API de Vivoo reçoit vos nouveaux leads, vos clients et vos commandes, qui entrent aussitôt dans vos campagnes et vos scénarios d'engagement.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sy-section sy-dark sy-reveal">
+  <div class="sy-wrap sy-split">
+    <div>{index_label("03", "Pour votre équipe technique")}<h2 class="sy-h2">Des envois signés, fiables et vérifiables.</h2></div>
+    <ul class="sy-checks">{"".join(f"<li>{t}</li>" for t in tech)}</ul>
+  </div>
+</section>
+
+<section class="sy-section sy-reveal">
+  <div class="sy-wrap sy-narrow">
+    {index_label("04", "Questions fréquentes")}
+    {faq}
+  </div>
+</section>
+{cta("Vos outils et Vivoo, enfin à jour en même temps.", "Créez votre compte et branchez vos outils, ou parlez à un spécialiste pour relier Vivoo à votre façon de travailler.")}"""
+    page("/integrations/", "Intégrations : CRM, Zapier, Make, Shopify. Vivoo",
+         "Vivoo envoie ses événements (nouveaux leads, rendez-vous, messages et commentaires reçus) à votre CRM, à Zapier, à Make ou à n8n, et reçoit vos leads, vos clients et vos commandes.",
+         "integrations", body, trail=[("Accueil", "/"), ("Intégrations", None)], extra_ld=ld)
+
+
 # ---------------------------------------------------------------- Blog
 
 def build_blog():
@@ -246,6 +323,7 @@ if __name__ == "__main__":
     build_faq()
     build_cases()
     build_partners()
+    build_integrations()
     build_blog()
     build_legal("mentions-legales", "Mentions légales")
     build_legal("conditions", "Conditions d'utilisation")

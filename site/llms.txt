@@ -13,13 +13,21 @@ Attirer → Capter → Converser → Convertir → Vendre → Fidéliser → Mes
 ## Les six pôles
 
 1. **Acquisition** (attirer). Prospection sur Google Maps, pages de capture, codes QR, campagnes, mesure Meta (Pixel et API de conversions). /solution/acquisition/
-2. **Conversation** (converser). WhatsApp, Instagram, Messenger, courriel, SMS, CRM avec profil client unifié. /solution/conversation/
-3. **Conversion** (convertir). Rendez-vous synchronisés avec Google Agenda, pages de conversion, pages de vente, paiement. /solution/conversion/
+2. **Conversation** (converser). WhatsApp, Instagram, Messenger, courriel, SMS, Agent IA, CRM avec profil client unifié. /solution/conversation/
+3. **Conversion** (convertir). Rendez-vous synchronisés avec Google Agenda, réservables en ligne ou dans une conversation WhatsApp, Messenger ou Instagram, pages de conversion, pages de vente, paiement. /solution/conversion/
 4. **Vente** (vendre). Produits, services, commandes, événements, synchronisation Shopify, Square, Clover et WooCommerce. /solution/vente/
 5. **Fidélisation** (fidéliser). Campagnes, promotions, codes promo, programme de fidélité, avis, segmentation RFM. /solution/fidelisation/
 6. **Automatisation** (automatiser). Déclencheurs, automatisations, séquences, notifications. /solution/automatisation/
 
 Le CRM, l'automatisation et la mesure (CAPI) sont les couches qui font fonctionner l'ensemble.
+
+## Agent IA
+
+L'Agent IA de Vivoo répond aux clients sur WhatsApp, Messenger et Instagram, de jour comme de nuit. Il connaît l'entreprise, présente l'offre de la page d'où vient le client (et lui demande laquelle l'intéresse s'il en a vu plusieurs), propose les disponibilités sous forme de liste et réserve le rendez-vous sans quitter la conversation. Il relance les conversations restées sans réponse et écrit une phrase d'accroche personnalisée dans les courriels de prospection. L'équipe reprend la main à tout moment ; les scénarios par mot-clé restent prioritaires. /produit/agent-ia/
+
+## Intégrations
+
+Vivoo envoie ses événements à l'adresse choisie par l'entreprise (CRM, Zapier, Make, n8n) : nouveau lead (avec la page d'origine), lead devenu client, contact modifié, rendez-vous pris, rendez-vous modifié, messages reçus sur WhatsApp, Messenger ou Instagram, commentaires reçus sur Facebook ou Instagram. Chaque envoi est signé (HMAC SHA-256) et retenté en cas d'échec. Vivoo reçoit aussi les leads, les clients et les commandes par son API et se synchronise avec Shopify, WooCommerce, Square et Clover. /integrations/
 
 ## Automatisation, séquence, scénario
 
@@ -67,10 +75,11 @@ Détails : /cas-clients/
 - Solutions par activité : /solutions/
 - Scénarios : /scenarios/
 - Comment ça marche : /comment-ca-marche/
+- Intégrations : /integrations/
 - Tarifs : /tarifs/
 - À propos : /a-propos/
 - Comment nous pensons : /vision/
-- Modules en détail : /produit/capture/, /produit/prospection/, /produit/audience-unifiee/, /produit/campagnes/, /produit/automatisation/, /produit/rendez-vous/, /produit/commerce/, /produit/evenements/, /produit/fidelisation/, /produit/reputation/
+- Modules en détail : /produit/capture/, /produit/prospection/, /produit/audience-unifiee/, /produit/agent-ia/, /produit/campagnes/, /produit/automatisation/, /produit/rendez-vous/, /produit/commerce/, /produit/evenements/, /produit/fidelisation/, /produit/reputation/
 - Cas clients : /cas-clients/
 - Partenaires : /partenaires/
 - FAQ : /faq/
