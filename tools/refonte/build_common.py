@@ -99,6 +99,7 @@ def header(active=""):
           <li class="sy-mega-sep" role="presentation"></li>
           <li><a href="/comment-ca-marche/"{cur(active, "comment")}><span class="sy-mega-k">Démarrer</span><span>Comment ça marche</span></a></li>
           <li><a href="/integrations/"{cur(active, "integrations")}><span class="sy-mega-k">Connecter</span><span>Intégrations</span></a></li>
+          <li><a href="/integration-ia/"{cur(active, "integration-ia")}><span class="sy-mega-k">IA</span><span>Intégration IA</span></a></li>
         </ul>
       </div>
       <div class="has-submenu">
@@ -137,6 +138,7 @@ FOOTER = f"""<footer class="site-footer">
 {chr(10).join(f'          <li><a href="/solution/{s}/">{n}</a></li>' for s, v, n in PILLARS_NAV)}
           <li><a href="/comment-ca-marche/">Comment ça marche</a></li>
           <li><a href="/integrations/">Intégrations</a></li>
+          <li><a href="/integration-ia/">Intégration IA</a></li>
         </ul>
       </div>
       <div>

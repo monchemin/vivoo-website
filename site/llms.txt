@@ -29,6 +29,10 @@ L'Agent IA de Vivoo répond aux clients sur WhatsApp, Messenger et Instagram, de
 
 Vivoo envoie ses événements à l'adresse choisie par l'entreprise (CRM, Zapier, Make, n8n) : nouveau lead (avec la page d'origine), lead devenu client, contact modifié, rendez-vous pris, rendez-vous modifié, messages reçus sur WhatsApp, Messenger ou Instagram, commentaires reçus sur Facebook ou Instagram. Chaque envoi est signé (HMAC SHA-256) et retenté en cas d'échec. Vivoo reçoit aussi les leads, les clients et les commandes par son API et se synchronise avec Shopify, WooCommerce, Square et Clover. /integrations/
 
+## Intégration IA
+
+Les IA travaillent dans Vivoo par une seule base d'actions, avec les mêmes règles, les mêmes droits et le même journal que l'équipe. Deux usages : l'assistant IA de l'entreprise (Claude, ChatGPT ou tout assistant compatible MCP), connecté au compte Vivoo par OAuth, exécute les actions que l'utilisateur dirige (retrouver un client et son historique, ajouter une note, créer ou clore une tâche, poser ou retirer une étiquette, assigner un contact, chercher un créneau, prendre, déplacer ou annuler un rendez-vous, préparer l'intégration d'une page de son site) ; l'Agent IA agit seul dans les conversations WhatsApp, Messenger et Instagram. L'assistant n'envoie pas de messages et agit un contact à la fois. Un rendez-vous pris par une IA suit le même parcours qu'une réservation en ligne. /integration-ia/
+
 ## Automatisation, séquence, scénario
 
 - Automatisation : une action se déclenche automatiquement (ex. 30 jours sans achat → relance).
@@ -76,6 +80,7 @@ Détails : /cas-clients/
 - Scénarios : /scenarios/
 - Comment ça marche : /comment-ca-marche/
 - Intégrations : /integrations/
+- Intégration IA : /integration-ia/
 - Tarifs : /tarifs/
 - À propos : /a-propos/
 - Comment nous pensons : /vision/

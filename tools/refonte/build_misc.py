@@ -75,6 +75,7 @@ FAQ = [
         ("Puis-je reprendre une conversation menée par l'Agent IA ?", "Oui, à tout moment. L'agent ne répond jamais dans une conversation prise en charge par une personne de votre équipe, et vous pouvez la lui rendre ensuite."),
         ("Mes clients peuvent-ils réserver sans quitter la conversation ?", "Oui. Sur WhatsApp, Messenger et Instagram, l'Agent IA propose les créneaux disponibles de votre calendrier, le client choisit et reçoit sa confirmation et ses rappels."),
         ("Vivoo peut-il envoyer ses données à mes autres outils ?", "Oui. Nouveaux leads, rendez-vous, messages et commentaires reçus : Vivoo les envoie à votre CRM, à Zapier, à Make ou à n8n, et reçoit vos leads, vos clients et vos commandes. Voir la page Intégrations."),
+        ("Puis-je connecter Claude ou ChatGPT à Vivoo ?", "Oui. Votre assistant IA se connecte à votre compte Vivoo et y agit avec vos droits : il retrouve un client, ajoute une note, crée une tâche, étiquette un contact ou prend un rendez-vous. Voir la page Intégration IA."),
     ]),
     ("Partenariat", [
         ("Comment fonctionne le modèle de partenariat Vivoo ?", "Vivoo fonctionne selon un modèle à trois niveaux : Vivoo opère la plateforme, un réseau de partenaires déploie Vivoo auprès de son portefeuille de marchands, et chaque marchand l'utilise pour engager sa propre clientèle."),
@@ -293,6 +294,124 @@ def build_integrations():
          "integrations", body, trail=[("Accueil", "/"), ("Intégrations", None)], extra_ld=ld)
 
 
+# ---------------------------------------------------------------- Intégration IA
+
+AI_BASE = [
+    ("Les mêmes actions", "Une note, une tâche, une étiquette ou un rendez-vous créé par une IA est identique à celui créé par votre équipe : mêmes vérifications, mêmes effets."),
+    ("Les mêmes règles", "Un rendez-vous pris par une IA suit le même parcours qu'une réservation en ligne : créneaux proposés seulement, confirmation et rappels au client, acompte demandé quand la prestation en prévoit un."),
+    ("Les mêmes droits", "Une IA ne voit et ne touche que ce qui lui est permis : vos modules actifs, votre rôle, votre portefeuille de contacts."),
+    ("Un seul journal", "Chaque action d'une IA est enregistrée, réussie ou refusée : qui, quoi, sur quel contact, quand."),
+]
+AI_ASSISTANT = [
+    ("Retrouver et comprendre un client", "« Qui sont mes leads de la semaine ? », « Résume-moi l'historique de ce client » : contacts, messages, notes, rendez-vous, factures."),
+    ("Noter et relancer", "Il ajoute une note au dossier, crée une tâche de suivi, clôt une tâche faite."),
+    ("Gérer les rendez-vous", "Il cherche un créneau libre, réserve pour un client, déplace ou annule un rendez-vous. Le client reçoit sa confirmation comme s'il avait réservé lui-même."),
+    ("Étiqueter vos contacts", "Il pose ou retire une de vos étiquettes ; vos séquences liées à l'étiquette se déclenchent comme d'habitude."),
+    ("Répartir le travail", "Il assigne un contact à un membre de votre équipe."),
+    ("Brancher une page de votre site", "Il prépare tout ce qu'il faut pour qu'une page de votre site inscrive à un événement ou envoie un formulaire dans Vivoo."),
+]
+AI_CONNECT = [
+    ("Copier l'adresse", "Elle est affichée dans la page « Assistant IA » de votre compte Vivoo."),
+    ("Ajouter le connecteur", "Collez-la dans les connecteurs de votre assistant."),
+    ("Autoriser l'accès", "Vivoo vous demande de confirmer le compte et les droits accordés."),
+    ("Demander", "Posez votre première question à votre assistant."),
+]
+AI_AGENT = [
+    ("Il répond tout de suite", "Sur WhatsApp, Messenger et Instagram, avec ce que vous lui avez appris de votre entreprise."),
+    ("Il réserve dans la conversation", "Il propose vos créneaux, le client choisit, le rendez-vous est confirmé dans votre agenda avec ses rappels."),
+    ("Il garde trace", "Il note ce qu'il apprend sur le client et crée une tâche pour votre équipe quand une personne doit intervenir."),
+    ("Vous gardez la main", "Votre équipe reprend la conversation quand elle le souhaite."),
+]
+AI_CONTROL = [
+    "Connexion sécurisée (OAuth) : votre assistant n'a jamais votre mot de passe.",
+    "Vos droits, rien de plus : un membre au rôle utilisateur ne donne accès qu'à ses contacts.",
+    "Les actions qui modifient vos données sont signalées à votre assistant, qui vous demande votre accord avant de les faire.",
+    "Aucune action en masse : un contact à la fois.",
+    "Pas d'envoi de messages ni de campagnes par votre assistant.",
+    "Chaque assistant connecté apparaît dans vos sessions et se déconnecte en un clic ; une connexion inutilisée pendant 30 jours se ferme d'elle-même.",
+]
+AI_FAQ = [
+    ("Quels assistants puis-je connecter ?", "Claude, ChatGPT et tout assistant compatible avec le protocole MCP (Model Context Protocol). Vous collez l'adresse de votre compte Vivoo dans ses connecteurs, puis vous autorisez l'accès."),
+    ("Quelle différence entre mon assistant IA et l'Agent IA ?", "Votre assistant exécute ce que vous lui demandez, quand vous le lui demandez. L'Agent IA agit seul, dans les conversations avec vos clients. Les deux passent par les mêmes actions et les mêmes règles."),
+    ("Mon assistant voit-il tous mes contacts ?", "Il voit ce que vous voyez : les mêmes modules, le même rôle, le même portefeuille de contacts."),
+    ("Mon assistant peut-il écrire à mes clients ?", "Non. Il consulte, note, relance, étiquette, assigne et gère les rendez-vous. Les messages restent envoyés par votre équipe, vos campagnes, vos scénarios ou l'Agent IA."),
+    ("Faut-il un abonnement de plus ?", "Non. La connexion d'un assistant fait partie de Vivoo, pour tous les comptes. Les actions proposées dépendent des modules que vous avez activés."),
+]
+
+
+def build_ai_integration():
+    def items(rows):
+        return "".join(f"<li><h3>{n}</h3><p>{d}</p><span></span></li>" for n, d in rows)
+    faq = "".join(f'<div class="faq-item"><h3>{q}</h3><p>{a}</p></div>' for q, a in AI_FAQ)
+    ld = [{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
+        {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in AI_FAQ]}]
+    body = hero("Intégration IA", "Vos IA travaillent dans Vivoo, avec les mêmes règles que votre équipe.",
+                "Votre assistant IA exécute ce que vous lui demandez. L'Agent IA agit seul dans vos conversations. Les deux passent par la même base : les mêmes actions, les mêmes règles et le même journal que votre équipe dans Vivoo.") + f"""
+<section class="sy-section sy-reveal">
+  <div class="sy-wrap">
+    <div class="sy-head sy-head--split">
+      <div>{index_label("01", "La couche de base")}<h2 class="sy-h2">Une seule base pour toutes vos IA.</h2></div>
+      <p class="sy-lead">Qu'une action vienne de votre équipe, de votre assistant ou de l'Agent IA, Vivoo l'exécute de la même façon.</p>
+    </div>
+    <ul class="sy-items">{items(AI_BASE)}</ul>
+  </div>
+</section>
+
+<section class="sy-section sy-alt sy-reveal">
+  <div class="sy-wrap">
+    <div class="sy-head">
+      <div>{index_label("02", "Deux façons de faire travailler l'IA")}<h2 class="sy-h2">Vous dirigez, ou elle agit seule.</h2></div>
+    </div>
+    <div class="sy-cards">
+      <a class="sy-card" href="#assistant"><span class="sy-card-num">Actions dirigées</span><h3>Votre assistant IA</h3><p>Vous connectez Claude, ChatGPT ou un autre assistant compatible à votre compte Vivoo. Vous lui demandez, il exécute, avec vos droits.</p><span class="sy-card-more">Voir ce qu'il fait →</span></a>
+      <a class="sy-card" href="#agent"><span class="sy-card-num">Actions automatiques</span><h3>L'Agent IA</h3><p>Il répond à vos clients sur WhatsApp, Messenger et Instagram, de jour comme de nuit, présente vos offres et réserve le rendez-vous dans la conversation, sans que vous ayez à intervenir.</p><span class="sy-card-more">Voir ce qu'il fait →</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="sy-section sy-reveal" id="assistant">
+  <div class="sy-wrap">
+    <div class="sy-head sy-head--split">
+      <div>{index_label("03", "Votre assistant IA")}<h2 class="sy-h2">Demandez, votre assistant le fait dans Vivoo.</h2></div>
+      <p class="sy-lead">Votre assistant se connecte à votre compte par le protocole MCP et agit pour vous, sur vos contacts, vos tâches et vos rendez-vous.</p>
+    </div>
+    <ul class="sy-items">{items(AI_ASSISTANT)}</ul>
+    <ol class="sy-steps sy-steps--4" style="margin-top:3rem">
+      {"".join(f'<li><span class="sy-step-num">{i:02d}</span><h3>{t}</h3><p>{p}</p></li>' for i, (t, p) in enumerate(AI_CONNECT, 1))}
+    </ol>
+  </div>
+</section>
+
+<section class="sy-section sy-alt sy-reveal" id="agent">
+  <div class="sy-wrap">
+    <div class="sy-head sy-head--split">
+      <div>{index_label("04", "L'Agent IA")}<h2 class="sy-h2">Il agit seul, dans vos conversations.</h2></div>
+      <p class="sy-lead">Pendant que vous travaillez, l'Agent IA répond, qualifie et réserve, avec les mêmes règles que votre équipe.</p>
+    </div>
+    <ul class="sy-items">{items(AI_AGENT)}</ul>
+    <div class="sy-actions" style="margin-top:2rem"><a class="btn btn-secondary" href="/produit/agent-ia/">Découvrir l'Agent IA</a></div>
+  </div>
+</section>
+
+<section class="sy-section sy-dark sy-reveal">
+  <div class="sy-wrap sy-split">
+    <div>{index_label("05", "Vous gardez le contrôle")}<h2 class="sy-h2">Vos données restent sous votre autorité.</h2></div>
+    <ul class="sy-checks">{"".join(f"<li>{t}</li>" for t in AI_CONTROL)}</ul>
+  </div>
+</section>
+
+<section class="sy-section sy-reveal">
+  <div class="sy-wrap sy-narrow">
+    {index_label("06", "Questions fréquentes")}
+    {faq}
+  </div>
+</section>
+{cta("Faites travailler vos IA dans votre système commercial.", "Créez votre compte et connectez votre assistant, ou parlez à un spécialiste pour voir ce que l'IA peut faire dans votre parcours.")}"""
+    page("/integration-ia/", "Intégration IA : Claude, ChatGPT et Agent IA. Vivoo",
+         "Connectez Claude, ChatGPT ou un autre assistant compatible MCP à Vivoo pour les actions que vous dirigez, et laissez l'Agent IA agir seul dans vos conversations, avec les mêmes règles que votre équipe.",
+         "integration-ia", body, trail=[("Accueil", "/"), ("Intégration IA", None)], extra_ld=ld)
+
+
 # ---------------------------------------------------------------- Blog
 
 def build_blog():
@@ -324,6 +443,7 @@ if __name__ == "__main__":
     build_cases()
     build_partners()
     build_integrations()
+    build_ai_integration()
     build_blog()
     build_legal("mentions-legales", "Mentions légales")
     build_legal("conditions", "Conditions d'utilisation")
