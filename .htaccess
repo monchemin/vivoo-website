@@ -7,6 +7,10 @@ DirectoryIndex index.html
 RewriteEngine On
 RewriteBase /
 
+# 0. www.vivoo.pro → vivoo.pro : une seule adresse, celle que Vivoo accepte pour les formulaires.
+RewriteCond %{HTTP_HOST} ^www\.vivoo\.pro$ [NC]
+RewriteRule ^ https://vivoo.pro%{REQUEST_URI} [R=301,L,NE]
+
 # 1. Une adresse tapée avec /site/ est redirigée vers sa version propre.
 RewriteCond %{THE_REQUEST} \s/site/([^\s?]*) [NC]
 RewriteRule ^ /%1 [R=301,L,NE]
@@ -23,5 +27,3 @@ RewriteRule ^(.*)$ /$1/ [R=301,L]
 # 3. Tout le reste est servi depuis site/ (docs/, tools/, etc. ne sont donc pas exposés).
 RewriteCond %{REQUEST_URI} !^/site/
 RewriteRule ^(.*)$ site/$1 [L]
-
-claude.md, memoire.md, changelog.md, spec.md, plan.md
