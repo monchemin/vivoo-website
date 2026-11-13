@@ -88,7 +88,7 @@ if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     <p class="sy-index">Partenaires</p>
     <h1 class="sy-display">Devenez partenaire Vivoo.</h1>
     <p class="sy-lead">Vivoo ne vend pas directement à chaque commerce. Nous travaillons avec des partenaires qui déploient la plateforme auprès de leur propre réseau de marchands. Vous gardez la relation commerciale, nous fournissons la technologie, l'infrastructure et l'accompagnement.</p>
-    <div class="sy-actions"><a class="btn btn-primary" href="https://app.vivoo.pro/forms/aPZjVK" target="_blank" rel="noopener">Devenir partenaire</a></div>
+    <div class="sy-actions"><a class="btn btn-primary" href="#devenir-partenaire">Devenir partenaire</a></div>
   </div>
 </section>
 
@@ -127,12 +127,64 @@ if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
   </div>
 </section>
 
+<section class="sy-section sy-reveal" id="devenir-partenaire">
+  <div class="sy-wrap sy-split vv-form-split">
+    <div>
+      <p class="sy-index"><b>04</b> — Candidature</p>
+      <h2 class="sy-h2">Parlons de votre réseau.</h2>
+      <p class="sy-lead">Dites-nous qui vous êtes, sur quel marché vous travaillez et quels marchands vous accompagnez. L'équipe Vivoo revient vers vous pour en discuter.</p>
+    </div>
+    <div class="vv-form-box">
+      <form class="contact-form vv-form" data-vivoo-form="aPZjVK" novalidate>
+        <p class="vv-form-note">Les champs marqués d'un <span aria-hidden="true">*</span><span class="sr-only">astérisque</span> sont obligatoires.</p>
+        <div class="form-row">
+          <div><label for="aPZjVK-name">Prénom <span aria-hidden="true">*</span></label>
+          <input id="aPZjVK-name" name="name" type="text" autocomplete="given-name" required></div>
+          <div><label for="aPZjVK-lastName">Nom <span aria-hidden="true">*</span></label>
+          <input id="aPZjVK-lastName" name="lastName" type="text" autocomplete="family-name" required></div>
+        </div>
+        <div><label for="aPZjVK-email">Courriel <span aria-hidden="true">*</span></label>
+        <input id="aPZjVK-email" name="email" type="email" autocomplete="email" required></div>
+        <div class="vv-tel">
+          <div><label for="aPZjVK-country">Pays</label>
+          <select id="aPZjVK-country" name="countryCode" autocomplete="country"><option value="CA">Canada (+1)</option><option value="US">États-Unis (+1)</option><option value="FR">France (+33)</option><option value="BE">Belgique (+32)</option><option value="CH">Suisse (+41)</option><option value="CI">Côte d'Ivoire (+225)</option><option value="SN">Sénégal (+221)</option><option value="CM">Cameroun (+237)</option><option value="BJ">Bénin (+229)</option><option value="TG">Togo (+228)</option><option value="GA">Gabon (+241)</option><option value="CD">RD Congo (+243)</option><option value="MA">Maroc (+212)</option><option value="TN">Tunisie (+216)</option></select></div>
+          <div><label for="aPZjVK-tel">Téléphone <span aria-hidden="true">*</span></label>
+          <input id="aPZjVK-tel" name="tel" type="tel" autocomplete="tel" inputmode="tel" placeholder="418 555 0123" aria-describedby="aPZjVK-tel-hint" required>
+          <small id="aPZjVK-tel-hint" class="vv-hint">Sans indicatif, le pays choisi est utilisé.</small></div>
+        </div>
+        <fieldset class="vv-wa" data-wa-question hidden>
+          <legend>Ce numéro est-il sur WhatsApp ?</legend>
+          <label><input type="radio" name="whatsappEnabled" value="oui"> Oui</label>
+          <label><input type="radio" name="whatsappEnabled" value="non"> Non</label>
+        </fieldset>
+        <input type="hidden" name="subject" value="Devenir partenaire">
+        <div><label for="aPZjVK-message">Votre réseau et votre marché <span aria-hidden="true">*</span></label>
+        <textarea id="aPZjVK-message" name="message" rows="5" placeholder="Votre entreprise, votre pays ou région, le type et le nombre de marchands que vous accompagnez…" required></textarea></div>
+        <div class="vv-trap" aria-hidden="true"><label for="aPZjVK-website">Site web</label>
+        <input id="aPZjVK-website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
+        <div class="form-checkbox">
+          <input id="aPZjVK-consent" name="consent" type="checkbox">
+          <label for="aPZjVK-consent">J'accepte de recevoir les communications de Vivoo. Je peux me désabonner à tout moment. <a href="/privacy/">Politique de confidentialité</a></label>
+        </div>
+        <p class="vv-form-error" data-form-status role="alert" tabindex="-1" hidden></p>
+        <button class="btn btn-primary" type="submit">Envoyer ma candidature</button>
+      </form>
+      <div class="vv-form-done" data-form-done tabindex="-1" hidden>
+        <h3>Merci <span data-done-name></span> !</h3>
+        <p><strong>Votre candidature est bien parvenue à l'équipe Vivoo.</strong></p>
+        <p>Nous vous contactons pour discuter de votre marché et d'un partenariat.</p>
+      </div>
+    </div>
+    <script src="/assets/js/vivoo-form.js" defer></script>
+  </div>
+</section>
+
 <section class="sy-cta">
   <div class="sy-wrap">
     <h2>Prêt à élargir votre offre avec Vivoo ?</h2>
     <p>Discutons de votre marché et de la façon dont un partenariat Vivoo peut s'y intégrer.</p>
     <div class="sy-actions">
-      <a class="btn sy-btn-light" href="https://app.vivoo.pro/forms/aPZjVK" target="_blank" rel="noopener">Devenir partenaire</a>
+      <a class="btn sy-btn-light" href="#devenir-partenaire">Devenir partenaire</a>
       <a class="btn sy-btn-ghost" href="/contact/">Nous contacter</a>
     </div>
     <div class="sy-cta-sign">Une plateforme, un réseau.</div>

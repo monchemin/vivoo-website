@@ -8,8 +8,68 @@ from build_common import *
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 P = json.load(open(os.path.join(HERE, "pages.json"), encoding="utf-8"))
-CONTACT_FORM = "https://app.vivoo.pro/forms/urfuZx"
-PARTNER_FORM = "https://app.vivoo.pro/forms/aPZjVK"
+# Pages d'acquisition Vivoo branchées sur les formulaires du site (gérées hors de Vivoo).
+CONTACT_SLUG = "urfuZx"
+PARTNER_SLUG = "aPZjVK"
+
+COUNTRIES = [("CA", "Canada (+1)"), ("US", "États-Unis (+1)"), ("FR", "France (+33)"), ("BE", "Belgique (+32)"),
+             ("CH", "Suisse (+41)"), ("CI", "Côte d'Ivoire (+225)"), ("SN", "Sénégal (+221)"), ("CM", "Cameroun (+237)"),
+             ("BJ", "Bénin (+229)"), ("TG", "Togo (+228)"), ("GA", "Gabon (+241)"), ("CD", "RD Congo (+243)"),
+             ("MA", "Maroc (+212)"), ("TN", "Tunisie (+216)")]
+
+
+def vivoo_form(slug, subject, message_label, message_hint, submit, done_title, done_text):
+    """Formulaire envoyé à la page d'acquisition Vivoo <slug> (voir assets/js/vivoo-form.js).
+    subject : liste de choix [(valeur, libellé)] ou texte fixe envoyé en champ caché."""
+    if isinstance(subject, str):
+        subject_html = f'<input type="hidden" name="subject" value="{subject}">'
+    else:
+        opts = "".join(f'<option value="{v}">{l}</option>' for v, l in subject)
+        subject_html = f"""<div><label for="{slug}-subject">Sujet</label>
+        <select id="{slug}-subject" name="subject">{opts}</select></div>"""
+    countries = "".join(f'<option value="{c}">{l}</option>' for c, l in COUNTRIES)
+    return f"""<div class="vv-form-box">
+      <form class="contact-form vv-form" data-vivoo-form="{slug}" novalidate>
+        <p class="vv-form-note">Les champs marqués d'un <span aria-hidden="true">*</span><span class="sr-only">astérisque</span> sont obligatoires.</p>
+        <div class="form-row">
+          <div><label for="{slug}-name">Prénom <span aria-hidden="true">*</span></label>
+          <input id="{slug}-name" name="name" type="text" autocomplete="given-name" required></div>
+          <div><label for="{slug}-lastName">Nom <span aria-hidden="true">*</span></label>
+          <input id="{slug}-lastName" name="lastName" type="text" autocomplete="family-name" required></div>
+        </div>
+        <div><label for="{slug}-email">Courriel <span aria-hidden="true">*</span></label>
+        <input id="{slug}-email" name="email" type="email" autocomplete="email" required></div>
+        <div class="vv-tel">
+          <div><label for="{slug}-country">Pays</label>
+          <select id="{slug}-country" name="countryCode" autocomplete="country">{countries}</select></div>
+          <div><label for="{slug}-tel">Téléphone <span aria-hidden="true">*</span></label>
+          <input id="{slug}-tel" name="tel" type="tel" autocomplete="tel" inputmode="tel" placeholder="418 555 0123" aria-describedby="{slug}-tel-hint" required>
+          <small id="{slug}-tel-hint" class="vv-hint">Sans indicatif, le pays choisi est utilisé.</small></div>
+        </div>
+        <fieldset class="vv-wa" data-wa-question hidden>
+          <legend>Ce numéro est-il sur WhatsApp ?</legend>
+          <label><input type="radio" name="whatsappEnabled" value="oui"> Oui</label>
+          <label><input type="radio" name="whatsappEnabled" value="non"> Non</label>
+        </fieldset>
+        {subject_html}
+        <div><label for="{slug}-message">{message_label} <span aria-hidden="true">*</span></label>
+        <textarea id="{slug}-message" name="message" rows="5" placeholder="{message_hint}" required></textarea></div>
+        <div class="vv-trap" aria-hidden="true"><label for="{slug}-website">Site web</label>
+        <input id="{slug}-website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
+        <div class="form-checkbox">
+          <input id="{slug}-consent" name="consent" type="checkbox">
+          <label for="{slug}-consent">J'accepte de recevoir les communications de Vivoo. Je peux me désabonner à tout moment. <a href="/privacy/">Politique de confidentialité</a></label>
+        </div>
+        <p class="vv-form-error" data-form-status role="alert" tabindex="-1" hidden></p>
+        <button class="btn btn-primary" type="submit">{submit}</button>
+      </form>
+      <div class="vv-form-done" data-form-done tabindex="-1" hidden>
+        <h3>Merci <span data-done-name></span> !</h3>
+        <p><strong>{done_title}</strong></p>
+        <p>{done_text}</p>
+      </div>
+    </div>
+    <script src="/assets/js/vivoo-form.js" defer></script>"""
 
 
 def hero(label, h1, lead="", dark=False, extra=""):
@@ -30,13 +90,23 @@ def build_contact():
     d = P["contact"]
     body = hero("Contact", "Parlons de votre prochaine étape.",
                 "Une question sur Vivoo, une démonstration, ou un intérêt pour le programme de partenariat : écrivez-nous, l'équipe vous répond directement.") + f"""
-<section class="sy-section sy-reveal">
-  <div class="sy-wrap">
-    <div class="sy-cards sy-cards--3">
-      <a class="sy-card" href="{CONTACT_FORM}" {EXT}><span class="sy-card-num">01 · Écrire</span><h3>Formulaire de contact</h3><p>Remplissez le formulaire en ligne, l'équipe Vivoo vous répond rapidement.</p><span class="sy-card-more">Remplir le formulaire →</span></a>
-      <a class="sy-card" href="{DEMO}" {EXT}><span class="sy-card-num">02 · Voir</span><h3>Parler à un spécialiste</h3><p>Réservez un moment pour voir Vivoo en action et dessiner votre parcours.</p><span class="sy-card-more">Réserver un échange →</span></a>
-      <a class="sy-card" href="{SIGNUP}" {EXT}><span class="sy-card-num">03 · Essayer</span><h3>Créer mon compte</h3><p>Vous préférez commencer tout de suite ? Créez votre compte et activez vos premiers modules.</p><span class="sy-card-more">Créer mon compte →</span></a>
+<section class="sy-section" id="formulaire">
+  <div class="sy-wrap sy-split vv-form-split">
+    <div>
+      {index_label("", "Écrire")}
+      <h2 class="sy-h2">Écrivez-nous.</h2>
+      <p class="sy-lead">Décrivez votre activité et ce que vous cherchez : l'équipe Vivoo vous répond rapidement, par courriel ou par téléphone.</p>
+      <ul class="vv-alt-links">
+        <li><a href="{DEMO}" {EXT}><strong>Parler à un spécialiste</strong> Réservez un moment pour voir Vivoo en action →</a></li>
+        <li><a href="{SIGNUP}" {EXT}><strong>Créer mon compte</strong> Commencez tout de suite et activez vos premiers modules →</a></li>
+      </ul>
     </div>
+    {vivoo_form(CONTACT_SLUG,
+                [("Question sur Vivoo", "Une question sur Vivoo"), ("Démonstration", "Une démonstration"),
+                 ("Tarifs", "Les tarifs"), ("Partenariat", "Le programme de partenariat"),
+                 ("Support", "Le support d'un compte existant"), ("Autre", "Autre chose")],
+                "Votre message", "Votre activité, vos objectifs, vos questions…", "Envoyer mon message",
+                "Votre message est bien parvenu à l'équipe Vivoo.", "Nous vous répondons rapidement, par courriel ou par téléphone.")}
   </div>
 </section>
 
@@ -172,7 +242,7 @@ def build_partners():
     ]
     body = hero("Partenaires", "Devenez partenaire Vivoo.",
                 "Vivoo ne vend pas directement à chaque commerce. Nous travaillons avec des partenaires qui déploient la plateforme auprès de leur propre réseau de marchands. Vous gardez la relation commerciale, nous fournissons la technologie, l'infrastructure et l'accompagnement.",
-                extra=f'<div class="sy-actions"><a class="btn btn-primary" href="{PARTNER_FORM}" {EXT}>Devenir partenaire</a></div>') + f"""
+                extra='<div class="sy-actions"><a class="btn btn-primary" href="#devenir-partenaire">Devenir partenaire</a></div>') + f"""
 <section class="sy-section sy-dark sy-reveal">
   <div class="sy-wrap">
     <div class="sy-head sy-head--split">
@@ -208,12 +278,26 @@ def build_partners():
   </div>
 </section>
 
+<section class="sy-section sy-reveal" id="devenir-partenaire">
+  <div class="sy-wrap sy-split vv-form-split">
+    <div>
+      {index_label("04", "Candidature")}
+      <h2 class="sy-h2">Parlons de votre réseau.</h2>
+      <p class="sy-lead">Dites-nous qui vous êtes, sur quel marché vous travaillez et quels marchands vous accompagnez. L'équipe Vivoo revient vers vous pour en discuter.</p>
+    </div>
+    {vivoo_form(PARTNER_SLUG, "Devenir partenaire",
+                "Votre réseau et votre marché", "Votre entreprise, votre pays ou région, le type et le nombre de marchands que vous accompagnez…",
+                "Envoyer ma candidature",
+                "Votre candidature est bien parvenue à l'équipe Vivoo.", "Nous vous contactons pour discuter de votre marché et d'un partenariat.")}
+  </div>
+</section>
+
 <section class="sy-cta">
   <div class="sy-wrap">
     <h2>Prêt à élargir votre offre avec Vivoo ?</h2>
     <p>Discutons de votre marché et de la façon dont un partenariat Vivoo peut s'y intégrer.</p>
     <div class="sy-actions">
-      <a class="btn sy-btn-light" href="{PARTNER_FORM}" {EXT}>Devenir partenaire</a>
+      <a class="btn sy-btn-light" href="#devenir-partenaire">Devenir partenaire</a>
       <a class="btn sy-btn-ghost" href="/contact/">Nous contacter</a>
     </div>
     <div class="sy-cta-sign">Une plateforme, un réseau.</div>

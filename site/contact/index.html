@@ -92,13 +92,60 @@ if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
   </div>
 </section>
 
-<section class="sy-section sy-reveal">
-  <div class="sy-wrap">
-    <div class="sy-cards sy-cards--3">
-      <a class="sy-card" href="https://app.vivoo.pro/forms/urfuZx" target="_blank" rel="noopener"><span class="sy-card-num">01 · Écrire</span><h3>Formulaire de contact</h3><p>Remplissez le formulaire en ligne, l'équipe Vivoo vous répond rapidement.</p><span class="sy-card-more">Remplir le formulaire →</span></a>
-      <a class="sy-card" href="https://app.vivoo.pro/book/zrNLzn" target="_blank" rel="noopener"><span class="sy-card-num">02 · Voir</span><h3>Parler à un spécialiste</h3><p>Réservez un moment pour voir Vivoo en action et dessiner votre parcours.</p><span class="sy-card-more">Réserver un échange →</span></a>
-      <a class="sy-card" href="https://app.vivoo.pro/signup/initiate" target="_blank" rel="noopener"><span class="sy-card-num">03 · Essayer</span><h3>Créer mon compte</h3><p>Vous préférez commencer tout de suite ? Créez votre compte et activez vos premiers modules.</p><span class="sy-card-more">Créer mon compte →</span></a>
+<section class="sy-section" id="formulaire">
+  <div class="sy-wrap sy-split vv-form-split">
+    <div>
+      <p class="sy-index">Écrire</p>
+      <h2 class="sy-h2">Écrivez-nous.</h2>
+      <p class="sy-lead">Décrivez votre activité et ce que vous cherchez : l'équipe Vivoo vous répond rapidement, par courriel ou par téléphone.</p>
+      <ul class="vv-alt-links">
+        <li><a href="https://app.vivoo.pro/book/zrNLzn" target="_blank" rel="noopener"><strong>Parler à un spécialiste</strong> Réservez un moment pour voir Vivoo en action →</a></li>
+        <li><a href="https://app.vivoo.pro/signup/initiate" target="_blank" rel="noopener"><strong>Créer mon compte</strong> Commencez tout de suite et activez vos premiers modules →</a></li>
+      </ul>
     </div>
+    <div class="vv-form-box">
+      <form class="contact-form vv-form" data-vivoo-form="urfuZx" novalidate>
+        <p class="vv-form-note">Les champs marqués d'un <span aria-hidden="true">*</span><span class="sr-only">astérisque</span> sont obligatoires.</p>
+        <div class="form-row">
+          <div><label for="urfuZx-name">Prénom <span aria-hidden="true">*</span></label>
+          <input id="urfuZx-name" name="name" type="text" autocomplete="given-name" required></div>
+          <div><label for="urfuZx-lastName">Nom <span aria-hidden="true">*</span></label>
+          <input id="urfuZx-lastName" name="lastName" type="text" autocomplete="family-name" required></div>
+        </div>
+        <div><label for="urfuZx-email">Courriel <span aria-hidden="true">*</span></label>
+        <input id="urfuZx-email" name="email" type="email" autocomplete="email" required></div>
+        <div class="vv-tel">
+          <div><label for="urfuZx-country">Pays</label>
+          <select id="urfuZx-country" name="countryCode" autocomplete="country"><option value="CA">Canada (+1)</option><option value="US">États-Unis (+1)</option><option value="FR">France (+33)</option><option value="BE">Belgique (+32)</option><option value="CH">Suisse (+41)</option><option value="CI">Côte d'Ivoire (+225)</option><option value="SN">Sénégal (+221)</option><option value="CM">Cameroun (+237)</option><option value="BJ">Bénin (+229)</option><option value="TG">Togo (+228)</option><option value="GA">Gabon (+241)</option><option value="CD">RD Congo (+243)</option><option value="MA">Maroc (+212)</option><option value="TN">Tunisie (+216)</option></select></div>
+          <div><label for="urfuZx-tel">Téléphone <span aria-hidden="true">*</span></label>
+          <input id="urfuZx-tel" name="tel" type="tel" autocomplete="tel" inputmode="tel" placeholder="418 555 0123" aria-describedby="urfuZx-tel-hint" required>
+          <small id="urfuZx-tel-hint" class="vv-hint">Sans indicatif, le pays choisi est utilisé.</small></div>
+        </div>
+        <fieldset class="vv-wa" data-wa-question hidden>
+          <legend>Ce numéro est-il sur WhatsApp ?</legend>
+          <label><input type="radio" name="whatsappEnabled" value="oui"> Oui</label>
+          <label><input type="radio" name="whatsappEnabled" value="non"> Non</label>
+        </fieldset>
+        <div><label for="urfuZx-subject">Sujet</label>
+        <select id="urfuZx-subject" name="subject"><option value="Question sur Vivoo">Une question sur Vivoo</option><option value="Démonstration">Une démonstration</option><option value="Tarifs">Les tarifs</option><option value="Partenariat">Le programme de partenariat</option><option value="Support">Le support d'un compte existant</option><option value="Autre">Autre chose</option></select></div>
+        <div><label for="urfuZx-message">Votre message <span aria-hidden="true">*</span></label>
+        <textarea id="urfuZx-message" name="message" rows="5" placeholder="Votre activité, vos objectifs, vos questions…" required></textarea></div>
+        <div class="vv-trap" aria-hidden="true"><label for="urfuZx-website">Site web</label>
+        <input id="urfuZx-website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
+        <div class="form-checkbox">
+          <input id="urfuZx-consent" name="consent" type="checkbox">
+          <label for="urfuZx-consent">J'accepte de recevoir les communications de Vivoo. Je peux me désabonner à tout moment. <a href="/privacy/">Politique de confidentialité</a></label>
+        </div>
+        <p class="vv-form-error" data-form-status role="alert" tabindex="-1" hidden></p>
+        <button class="btn btn-primary" type="submit">Envoyer mon message</button>
+      </form>
+      <div class="vv-form-done" data-form-done tabindex="-1" hidden>
+        <h3>Merci <span data-done-name></span> !</h3>
+        <p><strong>Votre message est bien parvenu à l'équipe Vivoo.</strong></p>
+        <p>Nous vous répondons rapidement, par courriel ou par téléphone.</p>
+      </div>
+    </div>
+    <script src="/assets/js/vivoo-form.js" defer></script>
   </div>
 </section>
 
