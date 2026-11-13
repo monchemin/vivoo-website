@@ -12,22 +12,27 @@ P = json.load(open(os.path.join(HERE, "pages.json"), encoding="utf-8"))
 CONTACT_SLUG = "urfuZx"
 PARTNER_SLUG = "aPZjVK"
 
-COUNTRIES = [("CA", "Canada (+1)"), ("US", "États-Unis (+1)"), ("FR", "France (+33)"), ("BE", "Belgique (+32)"),
-             ("CH", "Suisse (+41)"), ("CI", "Côte d'Ivoire (+225)"), ("SN", "Sénégal (+221)"), ("CM", "Cameroun (+237)"),
-             ("BJ", "Bénin (+229)"), ("TG", "Togo (+228)"), ("GA", "Gabon (+241)"), ("CD", "RD Congo (+243)"),
-             ("MA", "Maroc (+212)"), ("TN", "Tunisie (+216)")]
+# (code ISO, nom, indicatif) : le sélecteur du téléphone affiche drapeau et indicatif.
+COUNTRIES = [("CA", "Canada", "+1"), ("US", "États-Unis", "+1"), ("FR", "France", "+33"), ("BE", "Belgique", "+32"),
+             ("CH", "Suisse", "+41"), ("CI", "Côte d'Ivoire", "+225"), ("SN", "Sénégal", "+221"), ("CM", "Cameroun", "+237"),
+             ("BJ", "Bénin", "+229"), ("TG", "Togo", "+228"), ("GA", "Gabon", "+241"), ("CD", "RD Congo", "+243"),
+             ("MA", "Maroc", "+212"), ("TN", "Tunisie", "+216")]
+
+
+def flag(code):
+    return "".join(chr(0x1F1E6 + ord(c) - 65) for c in code)
 
 
 def vivoo_form(slug, subject, message_label, message_hint, submit, done_title, done_text):
     """Formulaire envoyé à la page d'acquisition Vivoo <slug> (voir assets/js/vivoo-form.js).
-    subject : liste de choix [(valeur, libellé)] ou texte fixe envoyé en champ caché."""
-    if isinstance(subject, str):
+    subject : None pour un sujet libre saisi par le visiteur, ou texte fixe envoyé en champ caché."""
+    if subject:
         subject_html = f'<input type="hidden" name="subject" value="{subject}">'
     else:
-        opts = "".join(f'<option value="{v}">{l}</option>' for v, l in subject)
-        subject_html = f"""<div><label for="{slug}-subject">Sujet</label>
-        <select id="{slug}-subject" name="subject">{opts}</select></div>"""
-    countries = "".join(f'<option value="{c}">{l}</option>' for c, l in COUNTRIES)
+        subject_html = f"""<div><label for="{slug}-subject">Sujet <span class="optional">(facultatif)</span></label>
+        <input id="{slug}-subject" name="subject" type="text" maxlength="150" placeholder="Une démonstration, les tarifs, un partenariat…"></div>"""
+    countries = "".join(f'<option value="{c}" data-show="{flag(c)} {d}">{flag(c)} {n} ({d})</option>' for c, n, d in COUNTRIES)
+    c0, _, d0 = COUNTRIES[0]
     return f"""<div class="vv-form-box">
       <form class="contact-form vv-form" data-vivoo-form="{slug}" novalidate>
         <p class="vv-form-note">Les champs marqués d'un <span aria-hidden="true">*</span><span class="sr-only">astérisque</span> sont obligatoires.</p>
@@ -39,12 +44,15 @@ def vivoo_form(slug, subject, message_label, message_hint, submit, done_title, d
         </div>
         <div><label for="{slug}-email">Courriel <span aria-hidden="true">*</span></label>
         <input id="{slug}-email" name="email" type="email" autocomplete="email" required></div>
-        <div class="vv-tel">
-          <div><label for="{slug}-country">Pays</label>
-          <select id="{slug}-country" name="countryCode" autocomplete="country">{countries}</select></div>
-          <div><label for="{slug}-tel">Téléphone <span aria-hidden="true">*</span></label>
-          <input id="{slug}-tel" name="tel" type="tel" autocomplete="tel" inputmode="tel" placeholder="418 555 0123" aria-describedby="{slug}-tel-hint" required>
-          <small id="{slug}-tel-hint" class="vv-hint">Sans indicatif, le pays choisi est utilisé.</small></div>
+        <div><label for="{slug}-tel">Téléphone <span aria-hidden="true">*</span></label>
+          <div class="vv-phone">
+            <div class="vv-cc">
+              <span class="vv-cc-show" aria-hidden="true">{flag(c0)} {d0}</span>
+              <select name="countryCode" aria-label="Pays de l'indicatif" autocomplete="country">{countries}</select>
+            </div>
+            <input id="{slug}-tel" name="tel" type="tel" autocomplete="tel-national" inputmode="tel" placeholder="418 555 0123" aria-describedby="{slug}-tel-hint" required>
+          </div>
+          <small id="{slug}-tel-hint" class="vv-hint">Choisissez le pays, puis tapez le numéro. Un numéro qui commence par + garde son propre indicatif.</small>
         </div>
         <fieldset class="vv-wa" data-wa-question hidden>
           <legend>Ce numéro est-il sur WhatsApp ?</legend>
@@ -102,9 +110,7 @@ def build_contact():
       </ul>
     </div>
     {vivoo_form(CONTACT_SLUG,
-                [("Question sur Vivoo", "Une question sur Vivoo"), ("Démonstration", "Une démonstration"),
-                 ("Tarifs", "Les tarifs"), ("Partenariat", "Le programme de partenariat"),
-                 ("Support", "Le support d'un compte existant"), ("Autre", "Autre chose")],
+                None,
                 "Votre message", "Votre activité, vos objectifs, vos questions…", "Envoyer mon message",
                 "Votre message est bien parvenu à l'équipe Vivoo.", "Nous vous répondons rapidement, par courriel ou par téléphone.")}
   </div>

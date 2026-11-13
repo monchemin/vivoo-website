@@ -145,12 +145,15 @@ if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
         </div>
         <div><label for="aPZjVK-email">Courriel <span aria-hidden="true">*</span></label>
         <input id="aPZjVK-email" name="email" type="email" autocomplete="email" required></div>
-        <div class="vv-tel">
-          <div><label for="aPZjVK-country">Pays</label>
-          <select id="aPZjVK-country" name="countryCode" autocomplete="country"><option value="CA">Canada (+1)</option><option value="US">États-Unis (+1)</option><option value="FR">France (+33)</option><option value="BE">Belgique (+32)</option><option value="CH">Suisse (+41)</option><option value="CI">Côte d'Ivoire (+225)</option><option value="SN">Sénégal (+221)</option><option value="CM">Cameroun (+237)</option><option value="BJ">Bénin (+229)</option><option value="TG">Togo (+228)</option><option value="GA">Gabon (+241)</option><option value="CD">RD Congo (+243)</option><option value="MA">Maroc (+212)</option><option value="TN">Tunisie (+216)</option></select></div>
-          <div><label for="aPZjVK-tel">Téléphone <span aria-hidden="true">*</span></label>
-          <input id="aPZjVK-tel" name="tel" type="tel" autocomplete="tel" inputmode="tel" placeholder="418 555 0123" aria-describedby="aPZjVK-tel-hint" required>
-          <small id="aPZjVK-tel-hint" class="vv-hint">Sans indicatif, le pays choisi est utilisé.</small></div>
+        <div><label for="aPZjVK-tel">Téléphone <span aria-hidden="true">*</span></label>
+          <div class="vv-phone">
+            <div class="vv-cc">
+              <span class="vv-cc-show" aria-hidden="true">🇨🇦 +1</span>
+              <select name="countryCode" aria-label="Pays de l'indicatif" autocomplete="country"><option value="CA" data-show="🇨🇦 +1">🇨🇦 Canada (+1)</option><option value="US" data-show="🇺🇸 +1">🇺🇸 États-Unis (+1)</option><option value="FR" data-show="🇫🇷 +33">🇫🇷 France (+33)</option><option value="BE" data-show="🇧🇪 +32">🇧🇪 Belgique (+32)</option><option value="CH" data-show="🇨🇭 +41">🇨🇭 Suisse (+41)</option><option value="CI" data-show="🇨🇮 +225">🇨🇮 Côte d'Ivoire (+225)</option><option value="SN" data-show="🇸🇳 +221">🇸🇳 Sénégal (+221)</option><option value="CM" data-show="🇨🇲 +237">🇨🇲 Cameroun (+237)</option><option value="BJ" data-show="🇧🇯 +229">🇧🇯 Bénin (+229)</option><option value="TG" data-show="🇹🇬 +228">🇹🇬 Togo (+228)</option><option value="GA" data-show="🇬🇦 +241">🇬🇦 Gabon (+241)</option><option value="CD" data-show="🇨🇩 +243">🇨🇩 RD Congo (+243)</option><option value="MA" data-show="🇲🇦 +212">🇲🇦 Maroc (+212)</option><option value="TN" data-show="🇹🇳 +216">🇹🇳 Tunisie (+216)</option></select>
+            </div>
+            <input id="aPZjVK-tel" name="tel" type="tel" autocomplete="tel-national" inputmode="tel" placeholder="418 555 0123" aria-describedby="aPZjVK-tel-hint" required>
+          </div>
+          <small id="aPZjVK-tel-hint" class="vv-hint">Choisissez le pays, puis tapez le numéro. Un numéro qui commence par + garde son propre indicatif.</small>
         </div>
         <fieldset class="vv-wa" data-wa-question hidden>
           <legend>Ce numéro est-il sur WhatsApp ?</legend>

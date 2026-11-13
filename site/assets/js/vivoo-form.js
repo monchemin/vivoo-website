@@ -62,6 +62,14 @@
     }
     if (tel) { tel.addEventListener('input', toggleWa); toggleWa(); }
 
+    // Indicatif affiché à gauche du numéro (drapeau et indicatif du pays choisi)
+    var cc = form.elements.countryCode;
+    var ccShow = form.querySelector('.vv-cc-show');
+    function showCc() {
+      if (ccShow) ccShow.textContent = cc.options[cc.selectedIndex].getAttribute('data-show');
+    }
+    if (cc) { cc.addEventListener('change', showCc); showCc(); }
+
     function showError(text) {
       status.textContent = text;
       status.hidden = false;
